@@ -150,25 +150,30 @@
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#create" >create</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#delete" >delete</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#findById" >findById</a>
                             </li>
                             <li>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#getByUserId" >getByUserId</a>
                             </li>
                             <li>
+                                    <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
                                 <a href="#update" >update</a>
@@ -198,6 +203,7 @@
                     <span class="name">
                             <span class="modifier"></span>
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Async</span>
                         <span ><b>create</b></span>
                         <a href="#create"><span class="icon ion-ios-link"></span></a>
@@ -215,14 +221,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post()<br />@UsePipes(new ValidationPipe())<br /></code>
+                    <code>@ApiBearerAuth()<br />@Post()<br />@UsePipes(new ValidationPipe())<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="73"
-                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:73</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:76</a></div>
                         </td>
                     </tr>
 
@@ -283,6 +289,7 @@
                     <a name="delete"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Async</span>
                         <span ><b>delete</b></span>
                         <a href="#delete"><span class="icon ion-ios-link"></span></a>
@@ -300,14 +307,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Delete(&#x27;:uuid&#x27;)<br /></code>
+                    <code>@ApiBearerAuth()<br />@Delete(&#x27;:uuid&#x27;)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="84"
-                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:84</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="88"
+                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:88</a></div>
                         </td>
                     </tr>
 
@@ -368,6 +375,7 @@
                     <a name="findById"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Async</span>
                         <span ><b>findById</b></span>
                         <a href="#findById"><span class="icon ion-ios-link"></span></a>
@@ -385,14 +393,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;getById/:id&#x27;)<br /></code>
+                    <code>@ApiBearerAuth()<br />@Get(&#x27;getById/:id&#x27;)<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="49"
-                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:49</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="50"
+                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:50</a></div>
                         </td>
                     </tr>
 
@@ -453,6 +461,7 @@
                     <a name="getByUserId"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Async</span>
                         <span ><b>getByUserId</b></span>
                         <a href="#getByUserId"><span class="icon ion-ios-link"></span></a>
@@ -470,7 +479,7 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Get(&#x27;getAllByUserId/:id&#x27;)<br /></code>
+                    <code>@ApiBearerAuth()<br />@Get(&#x27;getAllByUserId/:id&#x27;)<br /></code>
                 </td>
             </tr>
 
@@ -538,6 +547,7 @@
                     <a name="update"></a>
                     <span class="name">
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Async</span>
                         <span ><b>update</b></span>
                         <a href="#update"><span class="icon ion-ios-link"></span></a>
@@ -555,14 +565,14 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Put()<br /></code>
+                    <code>@ApiBearerAuth()<br />@Put()<br /></code>
                 </td>
             </tr>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="61"
-                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:61</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="63"
+                                    class="link-to-prism">src/aplicativo/controllers/conta.controller.ts:63</a></div>
                         </td>
                     </tr>
 
@@ -636,7 +646,6 @@ import { CreateContaDto, UpdateContaDto } from &#x27;../dto/conta-dto&#x27;;
 @ApiTags(&#x27;Account&#x27;)
 @ApiExtraModels(ResponseDto)
 @ApiExtraModels(Conta)
-@ApiBearerAuth()
 @Controller(&#x27;account&#x27;)
 export class ContaController {
 
@@ -655,6 +664,7 @@ export class ContaController {
    * @param {number} id identificador primário de Utilizador
    * @returns {Conta[]} Contas
    */  
+  @ApiBearerAuth()
   @Get(&#x27;getAllByUserId/:id&#x27;)
   async getByUserId(@Param(&#x27;id&#x27;) id: number): Promise&lt;IResponse&gt; {
     const result &#x3D; await this.service.getAllByUserId(id);
@@ -667,6 +677,7 @@ export class ContaController {
    * @param {number} id identificador primário de Conta
    * @returns {Conta} Conta
    */  
+  @ApiBearerAuth()
   @Get(&#x27;getById/:id&#x27;)
   async findById(@Param(&#x27;id&#x27;) id: number): Promise&lt;IResponse&gt; {
     const result &#x3D; await this.service.getById(id);
@@ -679,6 +690,7 @@ export class ContaController {
    * @param {UpdateContaDto} dto DTO de actualização de Conta
    * @returns {Conta} Conta
    */  
+  @ApiBearerAuth()
   @Put()
   async update(@Body() dto: UpdateContaDto): Promise&lt;IResponse&gt; {
     return await this.service.update(dto.uuid, dto);
@@ -690,6 +702,7 @@ export class ContaController {
    * @param {CreateContaDto} dto DTO de criação de Conta
    * @returns {Conta} Conta
    */
+  @ApiBearerAuth()
   @Post()
   @UsePipes(new ValidationPipe())
   async create(@Body() dto: CreateContaDto): Promise&lt;IResponse&gt; {
@@ -702,6 +715,7 @@ export class ContaController {
    * @param {string} uuid Identificador secundário
    * @returns {Conta} Conta
    */  
+  @ApiBearerAuth()
   @Delete(&#x27;:uuid&#x27;)
   async delete(@Param(&#x27;uuid&#x27;) uuid: string): Promise&lt;IResponse&gt; {
     return await this.service.delete(uuid);

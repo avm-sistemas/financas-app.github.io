@@ -209,6 +209,10 @@
                             <li>
                                 <a href="#registoForm" >registoForm</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#screenService" >screenService</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -259,7 +263,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(fb: FormBuilder, userService: <a href="../injectables/UtilizadorService.html" target="_self">UtilizadorService</a>, messageService: MessageService, router: Router)</code>
+<code>constructor(fb: FormBuilder, userService: <a href="../injectables/UtilizadorService.html" target="_self">UtilizadorService</a>, messageService: MessageService, router: Router, screenService: <a href="../injectables/ScreenService.html" target="_self">ScreenService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -331,6 +335,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>screenService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ScreenService.html" target="_self" >ScreenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -359,7 +375,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:56</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -392,8 +408,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="57"
-                                    class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:57</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="63"
+                                    class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:63</a></div>
                         </td>
                     </tr>
 
@@ -461,8 +477,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="66"
-                                    class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:66</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="72"
+                                    class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:72</a></div>
                         </td>
                     </tr>
 
@@ -581,18 +597,36 @@
 
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="screenService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>screenService</b></span>
+                        <a href="#screenService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>this.fb.group({
-    username: new FormControl(&quot;&quot;),
-    password: new FormControl(&quot;&quot;),
-    name: new FormControl(&quot;&quot;),
-  })</code>
+                        <i>Type : </i>        <code><a href="../injectables/ScreenService.html" target="_self" >ScreenService</a></code>
+
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/_modules/core/components/registo/registo.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -609,7 +643,6 @@
   ChangeDetectionStrategy,
   Component,
   EventEmitter,
-  OnInit,
   Output,
 } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
@@ -618,6 +651,7 @@ import { UtilizadorService } from &#x27;../../services/utilizador.service&#x27;;
 import { Utilizador } from &#x27;../../models/utilizador.model&#x27;;
 import { MessageService } from &#x27;primeng/api&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { ScreenService } from &#x27;../../services/screen.service&#x27;;
 
 /**
  * Componente de Registo no Sistema
@@ -632,11 +666,11 @@ export class RegistoComponent {
   display &#x3D; true;
   loading &#x3D; false;
 
-  registoForm: FormGroup &#x3D; this.fb.group({
+  registoForm: FormGroup;/* &#x3D; this.fb.group({
     username: new FormControl(&quot;&quot;),
     password: new FormControl(&quot;&quot;),
     name: new FormControl(&quot;&quot;),
-  });
+  });*/
 
   funcao &#x3D; funcao;
 
@@ -651,7 +685,13 @@ export class RegistoComponent {
   constructor(private fb: FormBuilder,
               private userService: UtilizadorService,
               private messageService: MessageService,
-              private router: Router) {
+              private router: Router,
+              public screenService: ScreenService) {
+    this.registoForm &#x3D; this.fb.group({
+      username: new FormControl(&quot;&quot;),
+      password: new FormControl(&quot;&quot;),
+      name: new FormControl(&quot;&quot;),
+    });              
   }
 
   @Output() emitToAlteraModo: EventEmitter&lt;any&gt; &#x3D; new EventEmitter();
@@ -697,19 +737,15 @@ export class RegistoComponent {
           this.loading &#x3D; false;
           this.messageService.add({
             severity: &#x27;success&#x27;,
-            summary: &#x27;Registado e autenticado&#x27;,
-            detail: &#x27;Registo&#x27;,
+            summary: &#x27;Registado&#x27;
           });
           this.router.navigate([&#x27;/aplicativo/contas&#x27;]);
           //window.location.href &#x3D; window.location.href;
         } else {
-          //this.showLoginError();
-          //TODO: Fechar
           this.loading &#x3D; false;
           this.messageService.add({
             severity: &#x27;error&#x27;,
-            summary: &#x27;Erro ao Autenticar&#x27;,
-            detail: &#x27;Login&#x27;,
+            summary: &#x27;Erro na Criação de Conta de Utilizador&#x27;,            
           });
         }
       });
@@ -719,53 +755,67 @@ export class RegistoComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Registo&lt;/h1&gt;
+        <pre class="line-numbers"><code class="language-html">
+&lt;div [ngStyle]&#x3D;&quot;{&#x27;padding&#x27;: (!screenService.isMobile &amp;&amp; !screenService.isTablet) ? &#x27;200px&#x27; : &#x27;&#x27;}&quot;&gt;
 
-&lt;div [formGroup]&#x3D;&quot;registoForm&quot;&gt;
-    &lt;div class&#x3D;&quot;p-fluid&quot;&gt;
-        &lt;div class&#x3D;&quot;p-field&quot;&gt;
-            &lt;label for&#x3D;&quot;input-user&quot;&gt;Nome&lt;/label&gt;
+  &lt;p-card&gt;
+    &lt;p-fieldset&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+        REGISTAR
+      &lt;/ng-template&gt;
+
+      &lt;div [formGroup]&#x3D;&quot;registoForm&quot;&gt;
+        &lt;div class&#x3D;&quot;p-fluid&quot;&gt;
+            &lt;div class&#x3D;&quot;p-field&quot;&gt;
+                &lt;label for&#x3D;&quot;input-user&quot;&gt;Nome&lt;/label&gt;
+                &lt;input
+                  id&#x3D;&quot;input-user&quot;
+                  formControlName&#x3D;&quot;name&quot;
+                  type&#x3D;&quot;text&quot;
+                  pInputText
+                  placeholder&#x3D;&quot;informe-nos vosso nome&quot;
+                /&gt;
+          &lt;/div&gt;
+    
+          &lt;div class&#x3D;&quot;p-field pt10px&quot;&gt;
+            &lt;label for&#x3D;&quot;input-email&quot;&gt;e-Mail&lt;/label&gt;
             &lt;input
-              id&#x3D;&quot;input-user&quot;
-              formControlName&#x3D;&quot;name&quot;
+              id&#x3D;&quot;input-email&quot;
+              formControlName&#x3D;&quot;username&quot;
               type&#x3D;&quot;text&quot;
               pInputText
-              placeholder&#x3D;&quot;informe-nos vosso nome&quot;
+              placeholder&#x3D;&quot;informe-nos vosso e-mail&quot;
             /&gt;
+          &lt;/div&gt;
+      
+          &lt;div class&#x3D;&quot;p-field pt10px&quot;&gt;
+            &lt;label for&#x3D;&quot;input-pw&quot;&gt;Password&lt;/label&gt;
+            &lt;p-password id&#x3D;&quot;input-pw&quot; formControlName&#x3D;&quot;password&quot; [feedback]&#x3D;&quot;false&quot; [toggleMask]&#x3D;&quot;true&quot; placeholder&#x3D;&quot;garanta vossa informação e tenha uma senha bem estranha&quot;&gt;&lt;/p-password&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      
+        &lt;div class&#x3D;&quot;row pt10px&quot;&gt;
+            &lt;p-button icon&#x3D;&quot;pi pi-user-plus&quot;
+                      (click)&#x3D;&quot;registar()&quot;
+                      label&#x3D;&quot;Registar&quot;
+                      [loading]&#x3D;&quot;loading&quot;
+            &gt;&lt;/p-button&gt;
+          
+            &lt;div style&#x3D;&quot;text-align: right;&quot;&gt;
+              &lt;p-button icon&#x3D;&quot;pi pi-sign-in&quot; (click)&#x3D;&quot;irParaModo(funcao.login)&quot; label&#x3D;&quot;Entrar&quot;&gt;&lt;/p-button&gt;&amp;nbsp;
+        
+              &lt;p-button icon&#x3D;&quot;pi pi-database&quot; (click)&#x3D;&quot;irParaModo(funcao.recuperar)&quot; label&#x3D;&quot;Recuperar&quot;&gt;&lt;/p-button&gt;
+          
+            &lt;/div&gt;        
+        &lt;/div&gt;
       &lt;/div&gt;
 
-      &lt;div class&#x3D;&quot;p-field&quot;&gt;
-        &lt;label for&#x3D;&quot;input-user&quot;&gt;e-Mail&lt;/label&gt;
-        &lt;input
-          id&#x3D;&quot;input-user&quot;
-          formControlName&#x3D;&quot;username&quot;
-          type&#x3D;&quot;text&quot;
-          pInputText
-          placeholder&#x3D;&quot;informe-nos vosso e-mail&quot;
-        /&gt;
-      &lt;/div&gt;
-  
-      &lt;div class&#x3D;&quot;p-field&quot;&gt;
-        &lt;label for&#x3D;&quot;input-pw&quot;&gt;Password&lt;/label&gt;
-        &lt;p-password id&#x3D;&quot;input-pw&quot; formControlName&#x3D;&quot;password&quot; [feedback]&#x3D;&quot;false&quot; [toggleMask]&#x3D;&quot;true&quot; placeholder&#x3D;&quot;garanta vossa informação e tenha uma senha bem estranha&quot;&gt;&lt;/p-password&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  
-    &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;padding-top: 10px;&quot;&gt;
-        &lt;p-button icon&#x3D;&quot;pi pi-user-plus&quot;
-                  (click)&#x3D;&quot;registar()&quot;
-                  label&#x3D;&quot;Registar&quot;
-                  [loading]&#x3D;&quot;loading&quot;
-        &gt;&lt;/p-button&gt;
-      
-        &lt;div style&#x3D;&quot;text-align: right;&quot;&gt;
-          &lt;p-button icon&#x3D;&quot;pi pi-sign-in&quot; (click)&#x3D;&quot;irParaModo(funcao.login)&quot; label&#x3D;&quot;Entrar&quot;&gt;&lt;/p-button&gt;&amp;nbsp;
-    
-          &lt;p-button icon&#x3D;&quot;pi pi-database&quot; (click)&#x3D;&quot;irParaModo(funcao.recuperar)&quot; label&#x3D;&quot;Recuperar&quot;&gt;&lt;/p-button&gt;
-      
-        &lt;/div&gt;
-    
-  &lt;/div&gt;
+    &lt;/p-fieldset&gt;
+  &lt;/p-card&gt;
+
+&lt;/div&gt;
+
+
   </code></pre>
     </div>
 
@@ -801,7 +851,7 @@ export class RegistoComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><h1>Registo</h1><div [formGroup]="registoForm">    <div class="p-fluid">        <div class="p-field">            <label for="input-user">Nome</label>            <input              id="input-user"              formControlName="name"              type="text"              pInputText              placeholder="informe-nos vosso nome"            />      </div>      <div class="p-field">        <label for="input-user">e-Mail</label>        <input          id="input-user"          formControlName="username"          type="text"          pInputText          placeholder="informe-nos vosso e-mail"        />      </div>        <div class="p-field">        <label for="input-pw">Password</label>        <p-password id="input-pw" formControlName="password" [feedback]="false" [toggleMask]="true" placeholder="garanta vossa informação e tenha uma senha bem estranha"></p-password>      </div>    </div>      <div class="row" style="padding-top: 10px;">        <p-button icon="pi pi-user-plus"                  (click)="registar()"                  label="Registar"                  [loading]="loading"        ></p-button>              <div style="text-align: right;">          <p-button icon="pi pi-sign-in" (click)="irParaModo(funcao.login)" label="Entrar"></p-button>&nbsp;              <p-button icon="pi pi-database" (click)="irParaModo(funcao.recuperar)" label="Recuperar"></p-button>              </div>      </div>  </div>'
+        var COMPONENT_TEMPLATE = '<div><div [ngStyle]="{\'padding\': (!screenService.isMobile && !screenService.isTablet) ? \'200px\' : \'\'}">  <p-card>    <p-fieldset>      <ng-template pTemplate="header">        REGISTAR      </ng-template>      <div [formGroup]="registoForm">        <div class="p-fluid">            <div class="p-field">                <label for="input-user">Nome</label>                <input                  id="input-user"                  formControlName="name"                  type="text"                  pInputText                  placeholder="informe-nos vosso nome"                />          </div>              <div class="p-field pt10px">            <label for="input-email">e-Mail</label>            <input              id="input-email"              formControlName="username"              type="text"              pInputText              placeholder="informe-nos vosso e-mail"            />          </div>                <div class="p-field pt10px">            <label for="input-pw">Password</label>            <p-password id="input-pw" formControlName="password" [feedback]="false" [toggleMask]="true" placeholder="garanta vossa informação e tenha uma senha bem estranha"></p-password>          </div>        </div>              <div class="row pt10px">            <p-button icon="pi pi-user-plus"                      (click)="registar()"                      label="Registar"                      [loading]="loading"            ></p-button>                      <div style="text-align: right;">              <p-button icon="pi pi-sign-in" (click)="irParaModo(funcao.login)" label="Entrar"></p-button>&nbsp;                      <p-button icon="pi pi-database" (click)="irParaModo(funcao.recuperar)" label="Recuperar"></p-button>                      </div>                </div>      </div>    </p-fieldset>  </p-card></div>  </div>'
     var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
     var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
     var ACTUAL_COMPONENT = {'name': 'RegistoComponent'};

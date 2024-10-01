@@ -727,7 +727,7 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @ApiProperty()<br />@Column({name: &#x27;NUM_VALUE&#x27;, nullable: false})<br />
+                            @ApiProperty()<br />@Column(&#x27;decimal&#x27;, {name: &#x27;NUM_VALUE&#x27;, precision: 10, scale: 2, nullable: false})<br />
                         </code>
                     </td>
                 </tr>
@@ -780,7 +780,7 @@ export class Lancamento {
     data: Date;
 
     @ApiProperty()
-    @Column({ name: &#x27;NUM_VALUE&#x27;, nullable: false })
+    @Column(&#x27;decimal&#x27;, { name: &#x27;NUM_VALUE&#x27;, precision: 10, scale: 2, nullable: false } )
     valor: number;
 
     @ApiProperty()

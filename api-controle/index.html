@@ -84,20 +84,20 @@
 
 <h1>API-CONTROLE</h1>
 <h2>Definição</h2>
-<p>A API-CONTROLE é um serviço REST API destinado ao controle da informação de Autenticação Utilizadores, Contas, Lançamento e Notificações.</p>
+<p>A API-CONTROLE é um serviço REST API destinado ao controle da informação de Autenticação, Utilizadores, Contas e Lançamentos.</p>
 <h2>Tecnologia</h2>
-<p>Foi concebido em Typescript com NestJs de forma a permitir escalar (verticalmente e/ou horizontalmente).</p>
+<p>Foi concebido em Typescript com NestJs de forma a permitir escalar.</p>
 <h2>Documentação</h2>
 <p>A documentação do código é gerada pela biblioteca compodoc e deve ser executada sempre que houver mudanças no software.</p>
 <p>Para executar, usar:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">   &gt; npm run compodoc</code></pre></div><p>É criada a pasta &quot;documentation&quot; na pasta raiz do projeto e deve ser executada pelo arquivo index.html.</p>
-<h2>Configuração</h2>
-<p>A configuração do banco de dados MySQL deve ser mantida no arquivo &quot;typeorm.config.ts&quot;. Se não houver dados na base destino, habilitar o parâmetro &quot;syncronize&quot; como &quot;true&quot;, caso contrário, manter como &quot;false&quot;.</p>
-<p>TODO: Implementar migrations</p>
-<h2>Execução</h2>
-<p>O software deve ser executado com o orquestrador a partir de seu arquivo main.ts ou com o comando interno para desenvolvimento:</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">   &gt; npm run start:dev</code></pre></div><h2>Contribuição</h2>
-<p>Este projeto tem como objetivo criar um software opensource para administração de lançamentos financeiros simples de forma a democratizar a utilização de um gestor de finanças. O projeto é criado e mantido por Andre Mesquita a aproveitar minha paixão de criar soluções e desenvolver software. Se encontrar valor em algo, ficaria grato por sua contribuição para o suporte deste aplicativo e, neste caso, <a href="https://github.com/sponsors/avmesquita">patrocinar-me</a> (mensalmente, esporádico ou mesmo um café).</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">   &gt; npm run compodoc</code></pre></div><h2>Configuração</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">   &gt; cd api-consolidado
+
+   &gt; npm install
+
+   &gt; copy .env.sample .env  </code></pre></div><h2>Execução</h2>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-bash">   &gt; npm run start:dev</code></pre></div><h2>Licença</h2>
+<p>Este software é gratuito e de código livre, GNU GENERAL PUBLIC LICENSE 3.</p>
 
 
 

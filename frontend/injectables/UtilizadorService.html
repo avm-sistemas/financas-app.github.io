@@ -175,12 +175,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(http: HttpClient, authService: <a href="../injectables/AuthenticationService.html" target="_self">AuthenticationService</a>)</code>
+<code>constructor(http: HttpClient, authService: <a href="../injectables/AuthenticationService.html" target="_self">AuthenticationService</a>, msgService: MessageService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/_modules/core/services/utilizador.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/_modules/core/services/utilizador.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -232,6 +232,20 @@
 
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>msgService</td>
+                                                  
+                                                        <td>
+                                                                    <code>MessageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -266,8 +280,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="52"
-                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:52</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="54"
+                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:54</a></div>
                         </td>
                     </tr>
 
@@ -340,8 +354,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="89"
-                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:89</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="93"
+                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:93</a></div>
                         </td>
                     </tr>
 
@@ -414,8 +428,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="42"
-                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:42</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="44"
+                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:44</a></div>
                         </td>
                     </tr>
 
@@ -489,8 +503,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="34"
+                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -531,8 +545,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="79"
-                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:79</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="83"
+                                    class="link-to-prism">src/_modules/core/services/utilizador.service.ts:83</a></div>
                         </td>
                     </tr>
 
@@ -597,6 +611,7 @@ import { HttpClient, HttpParams } from &#x27;@angular/common/http&#x27;;
 import { map, Observable } from &#x27;rxjs&#x27;;
 import { AuthenticationService } from &#x27;./authentication.service&#x27;;
 import { environment } from &#x27;src/environments/environment&#x27;;
+import { MessageService } from &#x27;primeng/api&#x27;;
 
 /**
  * Serviço de Utilizador
@@ -613,7 +628,8 @@ export class UtilizadorService {
    * @param {AuthenticationService} authService Serviço de Autenticação
    */
   constructor(private http: HttpClient,
-              private authService: AuthenticationService) {
+              private authService: AuthenticationService,
+              private msgService: MessageService) {
     
   }
 
@@ -650,12 +666,14 @@ export class UtilizadorService {
     return this.http.post&lt;any&gt;(url, body, options)
         .pipe(map(response &#x3D;&gt; {
             debugger;
-            if (response.success) {                
+            if (response.success) {
+              
+                /*
                 this.authService.autenticarUtilizador(obj.email, obj.senha).subscribe(
                   (o: any) &#x3D;&gt; {
                     console.log(&#x27;autenticado&#x27;,o);
                   }
-                );              
+                );*/              
                 return true;
             } else {
                 return false;

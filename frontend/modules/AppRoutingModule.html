@@ -142,9 +142,11 @@ const routes: Routes &#x3D; [
   {
     path: &quot;aplicativo&quot;,
     title: &#x27;Finanças App&#x27;,
-    loadChildren: () &#x3D;&gt;
-      &quot;import(\&quot;src/_modules/aplicativo/aplicativo.module\&quot;).then(\r\n\
-        (m) &#x3D;&gt; m.AplicativoModule)&quot;
+    loadChildren: () &#x3D;&gt;      
+      &quot;import(\r\n\
+        /* webpackChunkName: \&quot;AplicativoModule\&quot; */\r\n\
+        \&quot;src/_modules/aplicativo/aplicativo.module\&quot;\r\n\
+      ).then((m) &#x3D;&gt; m.AplicativoModule)&quot;
   },
   { path: &#x27;404&#x27;, component: MainContentComponent },
   { path: &#x27;**&#x27;, component: MainContentComponent },  

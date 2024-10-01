@@ -336,8 +336,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="103"
-                                    class="link-to-prism">src/_modules/aplicativo/services/conta.service.ts:103</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="101"
+                                    class="link-to-prism">src/_modules/aplicativo/services/conta.service.ts:101</a></div>
                         </td>
                     </tr>
 
@@ -543,8 +543,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="90"
-                                    class="link-to-prism">src/_modules/aplicativo/services/conta.service.ts:90</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="88"
+                                    class="link-to-prism">src/_modules/aplicativo/services/conta.service.ts:88</a></div>
                         </td>
                     </tr>
 
@@ -742,12 +742,10 @@ export class ContaService {
     
         return this.http.post&lt;any&gt;(url, body, options)
             .pipe(map(response &#x3D;&gt; {
-                debugger;
-                console.log(response);
                 if (response.success) {                    
-                    return true;
+                    return response;
                 } else {
-                    return false;
+                    return response;
                 }
             }));
     }

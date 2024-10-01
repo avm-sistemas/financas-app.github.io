@@ -153,6 +153,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#isMobile" >isMobile</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isTablet" >isTablet</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -177,7 +181,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/_modules/core/services/screen.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/_modules/core/services/screen.service.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -222,7 +226,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/_modules/core/services/screen.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/_modules/core/services/screen.service.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -260,7 +264,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/_modules/core/services/screen.service.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/_modules/core/services/screen.service.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -304,7 +308,45 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>A tela está em modo compacto?</p>
+                    <div class="io-description"><p>A tela está em modo compacto para telemóveis?</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isTablet"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>isTablet</b></span>
+                        <a href="#isTablet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>window.innerWidth &lt; 800</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/_modules/core/services/screen.service.ts:20</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A tela está em modo compacto para tablet?</p>
 </div>
                 </td>
             </tr>
@@ -329,9 +371,14 @@ import { environment } from &#x27;src/environments/environment&#x27;;
 export class ScreenService {
 
     /**
-     * A tela está em modo compacto?
+     * A tela está em modo compacto para telemóveis?
      */
     public isMobile: boolean &#x3D; window.innerWidth &lt; 600;
+
+    /**
+     * A tela está em modo compacto para tablet?
+     */
+    public isTablet: boolean &#x3D; window.innerWidth &lt; 800;
 
     /**
      * Largura da Tela

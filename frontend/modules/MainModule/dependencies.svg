@@ -24,115 +24,115 @@
 <title>cluster_MainModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 693,-268 693,-70 8,-70"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_MainModule_imports</title>
-<polygon fill="none" stroke="black" points="308,-78 308,-130 685,-130 685,-78 308,-78"/>
-</g>
-<g id="clust7" class="cluster">
-<title>cluster_MainModule_providers</title>
-<polygon fill="none" stroke="black" points="150,-78 150,-130 300,-130 300,-78 150,-78"/>
+<g id="clust2" class="cluster">
+<title>cluster_MainModule_declarations</title>
+<polygon fill="none" stroke="black" points="559,-78 559,-130 685,-130 685,-78 559,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_MainModule_bootstrap</title>
-<polygon fill="none" stroke="black" points="375,-208 375,-260 505,-260 505,-208 375,-208"/>
+<polygon fill="none" stroke="black" points="357,-208 357,-260 487,-260 487,-208 357,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_MainModule_imports</title>
+<polygon fill="none" stroke="black" points="174,-78 174,-130 551,-130 551,-78 174,-78"/>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_MainModule_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 166,-130 166,-78 16,-78"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_MainModule_exports</title>
-<polygon fill="none" stroke="black" points="237,-208 237,-260 367,-260 367,-208 237,-208"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_MainModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 142,-130 142,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="219,-208 219,-260 349,-260 349,-208 219,-208"/>
 </g>
 <!-- MainComponent -->
 <g id="node1" class="node">
 <title>MainComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="134.38,-122 23.62,-122 23.62,-86 134.38,-86 134.38,-122"/>
-<text text-anchor="middle" x="79" y="-99.8" font-family="Times,serif" font-size="14.00">MainComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="677.38,-122 566.62,-122 566.62,-86 677.38,-86 677.38,-122"/>
+<text text-anchor="middle" x="622" y="-99.8" font-family="Times,serif" font-size="14.00">MainComponent</text>
 </g>
 <!-- MainModule -->
 <g id="node2" class="node">
 <title>MainModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="415.6,-187 412.6,-191 391.6,-191 388.6,-187 326.4,-187 326.4,-151 415.6,-151 415.6,-187"/>
-<text text-anchor="middle" x="371" y="-164.8" font-family="Times,serif" font-size="14.00">MainModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="397.6,-187 394.6,-191 373.6,-191 370.6,-187 308.4,-187 308.4,-151 397.6,-151 397.6,-187"/>
+<text text-anchor="middle" x="353" y="-164.8" font-family="Times,serif" font-size="14.00">MainModule</text>
 </g>
 <!-- MainComponent&#45;&gt;MainModule -->
 <g id="edge1" class="edge">
 <title>MainComponent&#45;&gt;MainModule</title>
-<path fill="none" stroke="black" d="M79,-122.28C79,-143.32 79,-175 79,-175 79,-175 316.33,-175 316.33,-175"/>
-<polygon fill="black" stroke="black" points="316.33,-178.5 326.33,-175 316.33,-171.5 316.33,-178.5"/>
+<path fill="none" stroke="black" d="M622,-122.28C622,-143.32 622,-175 622,-175 622,-175 407.72,-175 407.72,-175"/>
+<polygon fill="black" stroke="black" points="407.72,-171.5 397.72,-175 407.72,-178.5 407.72,-171.5"/>
 </g>
 <!-- PrimeNgModule  -->
 <g id="node6" class="node">
 <title>PrimeNgModule </title>
-<polygon fill="#fb8072" stroke="black" points="358.6,-252 245.4,-252 245.4,-216 358.6,-216 358.6,-252"/>
-<text text-anchor="middle" x="302" y="-229.8" font-family="Times,serif" font-size="14.00">PrimeNgModule </text>
+<polygon fill="#fb8072" stroke="black" points="340.6,-252 227.4,-252 227.4,-216 340.6,-216 340.6,-252"/>
+<text text-anchor="middle" x="284" y="-229.8" font-family="Times,serif" font-size="14.00">PrimeNgModule </text>
 </g>
 <!-- MainModule&#45;&gt;PrimeNgModule  -->
 <g id="edge5" class="edge">
 <title>MainModule&#45;&gt;PrimeNgModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M342.62,-187.11C342.62,-187.11 342.62,-205.99 342.62,-205.99"/>
-<polygon fill="black" stroke="black" points="339.12,-205.99 342.62,-215.99 346.12,-205.99 339.12,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M324.62,-187.11C324.62,-187.11 324.62,-205.99 324.62,-205.99"/>
+<polygon fill="black" stroke="black" points="321.12,-205.99 324.62,-215.99 328.12,-205.99 321.12,-205.99"/>
 </g>
 <!-- MainComponent  -->
 <g id="node7" class="node">
 <title>MainComponent </title>
-<polygon fill="#80b1d3" stroke="black" points="497.38,-252 382.62,-252 382.62,-216 497.38,-216 497.38,-252"/>
-<text text-anchor="middle" x="440" y="-229.8" font-family="Times,serif" font-size="14.00">MainComponent </text>
+<polygon fill="#80b1d3" stroke="black" points="479.38,-252 364.62,-252 364.62,-216 479.38,-216 479.38,-252"/>
+<text text-anchor="middle" x="422" y="-229.8" font-family="Times,serif" font-size="14.00">MainComponent </text>
 </g>
 <!-- MainModule&#45;&gt;MainComponent  -->
 <g id="edge6" class="edge">
 <title>MainModule&#45;&gt;MainComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="1,5" d="M399.18,-187.11C399.18,-187.11 399.18,-205.99 399.18,-205.99"/>
-<polygon fill="black" stroke="black" points="395.68,-205.99 399.18,-215.99 402.68,-205.99 395.68,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M381.18,-187.11C381.18,-187.11 381.18,-205.99 381.18,-205.99"/>
+<polygon fill="black" stroke="black" points="377.68,-205.99 381.18,-215.99 384.68,-205.99 377.68,-205.99"/>
 </g>
 <!-- AppRoutingModule -->
 <g id="node3" class="node">
 <title>AppRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="677.27,-122 674.27,-126 653.27,-126 650.27,-122 548.73,-122 548.73,-86 677.27,-86 677.27,-122"/>
-<text text-anchor="middle" x="613" y="-99.8" font-family="Times,serif" font-size="14.00">AppRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="543.27,-122 540.27,-126 519.27,-126 516.27,-122 414.73,-122 414.73,-86 543.27,-86 543.27,-122"/>
+<text text-anchor="middle" x="479" y="-99.8" font-family="Times,serif" font-size="14.00">AppRoutingModule</text>
 </g>
 <!-- AppRoutingModule&#45;&gt;MainModule -->
 <g id="edge2" class="edge">
 <title>AppRoutingModule&#45;&gt;MainModule</title>
-<path fill="none" stroke="black" d="M613,-122.28C613,-143.32 613,-175 613,-175 613,-175 425.67,-175 425.67,-175"/>
-<polygon fill="black" stroke="black" points="425.67,-171.5 415.67,-175 425.67,-178.5 425.67,-171.5"/>
+<path fill="none" stroke="black" d="M446.9,-122.02C446.9,-139.37 446.9,-163 446.9,-163 446.9,-163 407.75,-163 407.75,-163"/>
+<polygon fill="black" stroke="black" points="407.75,-159.5 397.75,-163 407.75,-166.5 407.75,-159.5"/>
 </g>
 <!-- CoreModule -->
 <g id="node4" class="node">
 <title>CoreModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="530.26,-122 527.26,-126 506.26,-126 503.26,-122 443.74,-122 443.74,-86 530.26,-86 530.26,-122"/>
-<text text-anchor="middle" x="487" y="-99.8" font-family="Times,serif" font-size="14.00">CoreModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="396.26,-122 393.26,-126 372.26,-126 369.26,-122 309.74,-122 309.74,-86 396.26,-86 396.26,-122"/>
+<text text-anchor="middle" x="353" y="-99.8" font-family="Times,serif" font-size="14.00">CoreModule</text>
 </g>
 <!-- CoreModule&#45;&gt;MainModule -->
 <g id="edge3" class="edge">
 <title>CoreModule&#45;&gt;MainModule</title>
-<path fill="none" stroke="black" d="M470.41,-122.02C470.41,-139.37 470.41,-163 470.41,-163 470.41,-163 425.76,-163 425.76,-163"/>
-<polygon fill="black" stroke="black" points="425.76,-159.5 415.76,-163 425.76,-166.5 425.76,-159.5"/>
+<path fill="none" stroke="black" d="M353,-122.11C353,-122.11 353,-140.99 353,-140.99"/>
+<polygon fill="black" stroke="black" points="349.5,-140.99 353,-150.99 356.5,-140.99 349.5,-140.99"/>
 </g>
 <!-- PrimeNgModule -->
 <g id="node5" class="node">
 <title>PrimeNgModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="426.1,-122 423.1,-126 402.1,-126 399.1,-122 315.9,-122 315.9,-86 426.1,-86 426.1,-122"/>
-<text text-anchor="middle" x="371" y="-99.8" font-family="Times,serif" font-size="14.00">PrimeNgModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="292.1,-122 289.1,-126 268.1,-126 265.1,-122 181.9,-122 181.9,-86 292.1,-86 292.1,-122"/>
+<text text-anchor="middle" x="237" y="-99.8" font-family="Times,serif" font-size="14.00">PrimeNgModule</text>
 </g>
 <!-- PrimeNgModule&#45;&gt;MainModule -->
 <g id="edge4" class="edge">
 <title>PrimeNgModule&#45;&gt;MainModule</title>
-<path fill="none" stroke="black" d="M371,-122.11C371,-122.11 371,-140.99 371,-140.99"/>
-<polygon fill="black" stroke="black" points="367.5,-140.99 371,-150.99 374.5,-140.99 367.5,-140.99"/>
+<path fill="none" stroke="black" d="M259.62,-122.02C259.62,-139.37 259.62,-163 259.62,-163 259.62,-163 298.23,-163 298.23,-163"/>
+<polygon fill="black" stroke="black" points="298.23,-166.5 308.23,-163 298.23,-159.5 298.23,-166.5"/>
 </g>
 <!-- JwtInterceptor -->
 <g id="node8" class="node">
 <title>JwtInterceptor</title>
-<ellipse fill="#fdb462" stroke="black" cx="225" cy="-104" rx="66.61" ry="18"/>
-<text text-anchor="middle" x="225" y="-99.8" font-family="Times,serif" font-size="14.00">JwtInterceptor</text>
+<ellipse fill="#fdb462" stroke="black" cx="91" cy="-104" rx="66.61" ry="18"/>
+<text text-anchor="middle" x="91" y="-99.8" font-family="Times,serif" font-size="14.00">JwtInterceptor</text>
 </g>
 <!-- JwtInterceptor&#45;&gt;MainModule -->
 <g id="edge7" class="edge">
 <title>JwtInterceptor&#45;&gt;MainModule</title>
-<path fill="none" stroke="black" d="M268.5,-117.68C268.5,-135.11 268.5,-163 268.5,-163 268.5,-163 316.34,-163 316.34,-163"/>
-<polygon fill="black" stroke="black" points="316.34,-166.5 326.34,-163 316.34,-159.5 316.34,-166.5"/>
+<path fill="none" stroke="black" d="M91,-122.28C91,-143.32 91,-175 91,-175 91,-175 298.26,-175 298.26,-175"/>
+<polygon fill="black" stroke="black" points="298.26,-178.5 308.26,-175 298.26,-171.5 298.26,-178.5"/>
 </g>
 </g>
 </svg>

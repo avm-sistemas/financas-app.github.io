@@ -216,6 +216,9 @@
                                 <a href="#lancamento" >lancamento</a>
                             </li>
                             <li>
+                                <a href="#locale" >locale</a>
+                            </li>
+                            <li>
                                 <a href="#modo" >modo</a>
                             </li>
                             <li>
@@ -283,7 +286,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:48</a></div>
                             </td>
                         </tr>
 
@@ -388,8 +391,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="75"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:75</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:77</a></div>
                         </td>
                     </tr>
 
@@ -427,8 +430,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="139"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:139</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="141"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:141</a></div>
                         </td>
                     </tr>
 
@@ -469,8 +472,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="228"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:228</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="229"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:229</a></div>
                         </td>
                     </tr>
 
@@ -508,8 +511,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="68"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:68</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="70"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:70</a></div>
                         </td>
                     </tr>
 
@@ -547,8 +550,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="172"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:172</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="173"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:173</a></div>
                         </td>
                     </tr>
 
@@ -586,8 +589,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="118"
-                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:118</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="120"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:120</a></div>
                         </td>
                     </tr>
 
@@ -785,6 +788,26 @@
                     <tr>
                         <td class="col-md-4">
                                 <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="locale"></a>
+                    <span class="name">
+                        <span ><b>locale</b></span>
+                        <a href="#locale"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -1000,7 +1023,9 @@ export class LancamentoDetalheComponent implements OnInit {
       tipo: &#x27;Credito&#x27;,
       value: &#x27;C&#x27;
     },
-  ]
+  ];
+
+  locale: &#x27;pt-BR&#x27;;
 
   /**
    * Constructor / Injeção de Dependência
@@ -1111,8 +1136,7 @@ export class LancamentoDetalheComponent implements OnInit {
     lancamento.tipoLancamento &#x3D; this.formLancamento.controls.tipoLancamento.value;
     lancamento.valor &#x3D; this.formLancamento.controls.valor.value;
     
-    lancamento.contaId &#x3D; Number.parseInt(this.idConta);        
-    console.log(&#x27;inclusao na conta &#x3D;&gt; &#x27;, lancamento.contaId);
+    lancamento.contaId &#x3D; Number.parseInt(this.idConta);            
 
     if (lancamento.tipoLancamento &#x3D;&#x3D; &#x27;D&#x27;) {
       if (lancamento.valor &gt; 0) {
@@ -1151,7 +1175,7 @@ export class LancamentoDetalheComponent implements OnInit {
         debugger;
         this.lancamentoService
         .update(this.lancamento).subscribe( 
-          (retorno: any) &#x3D;&gt; {
+          (retorno: any) &#x3D;&gt; {            
             if (retorno.body.success) {
               this.ref.close(retorno.body);
             }
@@ -1234,10 +1258,7 @@ export class LancamentoDetalheComponent implements OnInit {
                 &lt;div class&#x3D;&quot;col-6&quot;&gt;
                     &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;                    
                         &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
-                            &lt;!--
-                            &lt;p-inputSwitch id&#x3D;&quot;float-input&quot; name&#x3D;&quot;isConsolidado&quot; formControlName&#x3D;&quot;isConsolidado&quot; &gt;&lt;/p-inputSwitch&gt;                        
-                            &lt;label for&#x3D;&quot;float-input&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Consolidado&lt;/label&gt;
-                            --&gt;
+                            &amp;nbsp;
                         &lt;/span&gt;
                     &lt;/div&gt;                
                 &lt;/div&gt;
@@ -1246,13 +1267,11 @@ export class LancamentoDetalheComponent implements OnInit {
                     &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
                         &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-dollar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                         &lt;span class&#x3D;&quot;p-float-label&quot;&gt;                        
-                            &lt;p-inputNumber id&#x3D;&quot;valor-titulo&quot; formControlName&#x3D;&quot;valor&quot; mode&#x3D;&quot;decimal&quot; [maxFractionDigits]&#x3D;&quot;2&quot; &gt;&lt;/p-inputNumber&gt;
+                            &lt;p-inputNumber id&#x3D;&quot;valor-titulo&quot; formControlName&#x3D;&quot;valor&quot; mode&#x3D;&quot;decimal&quot; [useGrouping]&#x3D;&quot;false&quot; [maxFractionDigits]&#x3D;&quot;2&quot; [locale]&#x3D;&quot;locale&quot; &gt;&lt;/p-inputNumber&gt;
                             &lt;label for&#x3D;&quot;valor-titulo&quot;&gt;Valor do Título&lt;/label&gt;
                         &lt;/span&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;    
-    
-            
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;grid&quot;&gt;
 
@@ -1282,7 +1301,7 @@ export class LancamentoDetalheComponent implements OnInit {
                 &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
                     &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-tags&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                     &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
-                        &lt;!--&lt;p-chips id&#x3D;&quot;float-input&quot; separator&#x3D;&quot;,&quot; formControlName&#x3D;&quot;categorias&quot;&gt;&lt;/p-chips&gt;--&gt;
+                        &lt;!--&lt;p-chips id&#x3D;&quot;categorias&quot; separator&#x3D;&quot;,&quot; formControlName&#x3D;&quot;categorias&quot;&gt;&lt;/p-chips&gt;--&gt;
                         &lt;input id&#x3D;&quot;categorias&quot; pInputText formControlName&#x3D;&quot;categorias&quot; placeholder&#x3D;&quot;informe separado por virgulas&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
                         &lt;label for&#x3D;&quot;categorias&quot;&gt;Categorias&lt;/label&gt;
                     &lt;/span&gt;
@@ -1390,7 +1409,7 @@ textarea.p-inputtext {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="height: 10px;"></div><ng-container *ngIf="modo === ModoExterno.Nenhum">    <p style="text-align: center;">        Sem Permissão    </p></ng-container>    <form [formGroup]="formLancamento" style="margin-top: -25px;">    <input type="hidden" formControlName="id" />      <p-panel header="LANÇAMENTO">        <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="tp-lancamento">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                        <span class="p-float-label">                                                    <p-dropdown class="dpTipoLancamento" pInput [options]="tiposDeLancamento" formControlName="tipoLancamento" optionLabel="tipo" optionValue="value"></p-dropdown>                                                    <label for="tiposDeLancamento">Tipo de Lançamento</label>                        </span>                    </div>                    </div>                </div>                    <div class="col-6">                    <div class="p-inputgroup">                                                <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>                                                <span class="p-float-label-fake">                                                        <input pInput id="dataLancamento" type="date" formControlName="dataLancamento" required style="height:36px;border:0.5px solid lightgray" />                            <!--                            <p-calendar formControlName="dataLancamento"                                        [showIcon]="false"                                         [showOnFocus]="true"                                         inputId="dataLancamento"                                        id="dataLancamento" />                            -->                                                    </span>                    </div>                </div>            </div>            <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="p-inputgroup">                                            <span class="p-float-label">                            <!--                            <p-inputSwitch id="float-input" name="isConsolidado" formControlName="isConsolidado" ></p-inputSwitch>                                                    <label for="float-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consolidado</label>                            -->                        </span>                    </div>                                </div>                <div class="col-6">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-dollar"></i></span>                        <span class="p-float-label">                                                    <p-inputNumber id="valor-titulo" formControlName="valor" mode="decimal" [maxFractionDigits]="2" ></p-inputNumber>                            <label for="valor-titulo">Valor do Título</label>                        </span>                    </div>                </div>                            </div>        <div class="grid">            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <input id="titulo" type="text" maxlength="100" pInputText formControlName="titulo" aria-describedby="titulo-help" placeholder="" required />                        <label for="titulo">Titulo</label>                    </span>                </div>                <small id="lancamento-help" class="p-error" *ngIf="formLancamento.controls[\'titulo\'].errors && formLancamento.controls[\'titulo\'].dirty">Titulo inválido</small>            </div>                <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <textarea id="descricao" pInputText formControlName="descricao" rows="3" cols="20"></textarea>                        <label for="descricao">Descrição</label>                    </span>                </div>                <small id="email-help" class="p-error" *ngIf="formLancamento.controls[\'descricao\'].errors && formLancamento.controls[\'descricao\'].dirty">Descrição inválida</small>            </div>            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-tags"></i></span>                    <span class="p-float-label">                        <!--<p-chips id="float-input" separator="," formControlName="categorias"></p-chips>-->                        <input id="categorias" pInputText formControlName="categorias" placeholder="informe separado por virgulas" style="width: 100%;">                        <label for="categorias">Categorias</label>                    </span>                </div>            </div>            <div class="col-6" style="padding-top: 20px;">                <div class="p-inputgroup">                                        <span class="p-float-label">                    </span>                </div>            </div>        </div>      </p-panel>    <div>        <div class="grid" style="padding-top: 20px;">            <div class="col-6">              <button pButton type="button" label="Fechar" class="ui-button-raised p-button-warning"                 (click)="fechar()"></button>            </div>                                <div class="col-6" style="float:right;text-align: right;" *ngIf="this.modo != ModoExterno.Consultar && this.modo != ModoExterno.Nenhum">              <button pButton type="button" label="Registar" class="ui-button-raised p-button-success"                 (click)="submitLancamento()" [disabled]="!formLancamento.valid"></button>            </div>        </div>    </div>    <div *ngIf="!formLancamento.valid">        {{ formLancamento.errors  }}    </div></form>    </div>'
+        var COMPONENT_TEMPLATE = '<div><div style="height: 10px;"></div><ng-container *ngIf="modo === ModoExterno.Nenhum">    <p style="text-align: center;">        Sem Permissão    </p></ng-container>    <form [formGroup]="formLancamento" style="margin-top: -25px;">    <input type="hidden" formControlName="id" />      <p-panel header="LANÇAMENTO">        <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="tp-lancamento">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                        <span class="p-float-label">                                                    <p-dropdown class="dpTipoLancamento" pInput [options]="tiposDeLancamento" formControlName="tipoLancamento" optionLabel="tipo" optionValue="value"></p-dropdown>                                                    <label for="tiposDeLancamento">Tipo de Lançamento</label>                        </span>                    </div>                    </div>                </div>                    <div class="col-6">                    <div class="p-inputgroup">                                                <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>                                                <span class="p-float-label-fake">                                                        <input pInput id="dataLancamento" type="date" formControlName="dataLancamento" required style="height:36px;border:0.5px solid lightgray" />                            <!--                            <p-calendar formControlName="dataLancamento"                                        [showIcon]="false"                                         [showOnFocus]="true"                                         inputId="dataLancamento"                                        id="dataLancamento" />                            -->                                                    </span>                    </div>                </div>            </div>            <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="p-inputgroup">                                            <span class="p-float-label">                            &nbsp;                        </span>                    </div>                                </div>                <div class="col-6">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-dollar"></i></span>                        <span class="p-float-label">                                                    <p-inputNumber id="valor-titulo" formControlName="valor" mode="decimal" [useGrouping]="false" [maxFractionDigits]="2" [locale]="locale" ></p-inputNumber>                            <label for="valor-titulo">Valor do Título</label>                        </span>                    </div>                </div>            </div>        <div class="grid">            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <input id="titulo" type="text" maxlength="100" pInputText formControlName="titulo" aria-describedby="titulo-help" placeholder="" required />                        <label for="titulo">Titulo</label>                    </span>                </div>                <small id="lancamento-help" class="p-error" *ngIf="formLancamento.controls[\'titulo\'].errors && formLancamento.controls[\'titulo\'].dirty">Titulo inválido</small>            </div>                <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <textarea id="descricao" pInputText formControlName="descricao" rows="3" cols="20"></textarea>                        <label for="descricao">Descrição</label>                    </span>                </div>                <small id="email-help" class="p-error" *ngIf="formLancamento.controls[\'descricao\'].errors && formLancamento.controls[\'descricao\'].dirty">Descrição inválida</small>            </div>            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-tags"></i></span>                    <span class="p-float-label">                        <!--<p-chips id="categorias" separator="," formControlName="categorias"></p-chips>-->                        <input id="categorias" pInputText formControlName="categorias" placeholder="informe separado por virgulas" style="width: 100%;">                        <label for="categorias">Categorias</label>                    </span>                </div>            </div>            <div class="col-6" style="padding-top: 20px;">                <div class="p-inputgroup">                                        <span class="p-float-label">                    </span>                </div>            </div>        </div>      </p-panel>    <div>        <div class="grid" style="padding-top: 20px;">            <div class="col-6">              <button pButton type="button" label="Fechar" class="ui-button-raised p-button-warning"                 (click)="fechar()"></button>            </div>                                <div class="col-6" style="float:right;text-align: right;" *ngIf="this.modo != ModoExterno.Consultar && this.modo != ModoExterno.Nenhum">              <button pButton type="button" label="Registar" class="ui-button-raised p-button-success"                 (click)="submitLancamento()" [disabled]="!formLancamento.valid"></button>            </div>        </div>    </div>    <div *ngIf="!formLancamento.valid">        {{ formLancamento.errors  }}    </div></form>    </div>'
     var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
     var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
     var ACTUAL_COMPONENT = {'name': 'LancamentoDetalheComponent'};

@@ -549,7 +549,8 @@ export class AutenticacaoComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;padding: 50px;&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;p-toast /&gt;
+&lt;div style&#x3D;&quot;padding: 50px;&quot;&gt;
 &lt;div *ngIf&#x3D;&quot;display &#x3D;&#x3D;&#x3D; funcao.login&quot;&gt;
     &lt;app-login (emitToAlteraModo)&#x3D;&quot;alteraModo($event)&quot;&gt;&lt;/app-login&gt;    
 &lt;/div&gt;
@@ -594,7 +595,7 @@ export class AutenticacaoComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="padding: 50px;"><div *ngIf="display === funcao.login">    <app-login (emitToAlteraModo)="alteraModo($event)"></app-login>    </div> <div *ngIf="display === funcao.registo">     <app-registo (emitToAlteraModo)="alteraModo($event)"></app-registo> </div>  <div *ngIf="display === funcao.recuperar">     <app-recuperar (emitToAlteraModo)="alteraModo($event)"></app-recuperar>  </div> </div></div>'
+        var COMPONENT_TEMPLATE = '<div><p-toast /><div style="padding: 50px;"><div *ngIf="display === funcao.login">    <app-login (emitToAlteraModo)="alteraModo($event)"></app-login>    </div> <div *ngIf="display === funcao.registo">     <app-registo (emitToAlteraModo)="alteraModo($event)"></app-registo> </div>  <div *ngIf="display === funcao.recuperar">     <app-recuperar (emitToAlteraModo)="alteraModo($event)"></app-recuperar>  </div> </div></div>'
     var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
     var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
     var ACTUAL_COMPONENT = {'name': 'AutenticacaoComponent'};

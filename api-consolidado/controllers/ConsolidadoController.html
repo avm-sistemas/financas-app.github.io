@@ -155,6 +155,11 @@
                             <li>
                                     <span class="modifier"></span>
                                     <span class="modifier">Async</span>
+                                <a href="#getAccountBalanceToday" >getAccountBalanceToday</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                    <span class="modifier">Async</span>
                                 <a href="#getUserAccountsBalance" >getUserAccountsBalance</a>
                             </li>
                         </ul>
@@ -262,6 +267,90 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getAccountBalanceToday"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                            <span class="modifier">Async</span>
+                        <span ><b>getAccountBalanceToday</b></span>
+                        <a href="#getAccountBalanceToday"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAccountBalanceToday(accountId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Get(&#x27;getAccountBalanceToday/:accountId&#x27;)<br /></code>
+                </td>
+            </tr>
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/consolidado.controller.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obter os saldos de credito e debito de uma conta até a data atual</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                                <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>accountId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                            <td>
+                                                    <p>Identificador Primário da Conta</p>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getUserAccountsBalance"></a>
                     <span class="name">
                             <span class="modifier"></span>
@@ -288,8 +377,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="43"
-                                    class="link-to-prism">src/consolidado.controller.ts:43</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="55"
+                                    class="link-to-prism">src/consolidado.controller.ts:55</a></div>
                         </td>
                     </tr>
 
@@ -380,6 +469,18 @@ export class ConsolidadoController {
     const result &#x3D; await this.service.getAccountBalance(accountId.toString());
     return result;
   }
+
+  /**
+   * Obter os saldos de credito e debito de uma conta até a data atual
+   * 
+   * @param accountId Identificador Primário da Conta
+   * @returns 
+   */
+  @Get(&#x27;getAccountBalanceToday/:accountId&#x27;)
+  async getAccountBalanceToday(@Param(&#x27;accountId&#x27;) accountId: number): Promise&lt;any&gt; {
+    const result &#x3D; await this.service.getAccountBalanceToday(accountId.toString());
+    return result;
+  }  
 
   /**
    * Obter os saldos de credito e debito das contas de um utilizador

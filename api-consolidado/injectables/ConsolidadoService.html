@@ -148,6 +148,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#getAccountBalanceToday" >getAccountBalanceToday</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#getUserAccountsBalance" >getUserAccountsBalance</a>
                             </li>
                         </ul>
@@ -293,6 +297,77 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getAccountBalanceToday"></a>
+                    <span class="name">
+                            <span class="modifier">Async</span>
+                        <span ><b>getAccountBalanceToday</b></span>
+                        <a href="#getAccountBalanceToday"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAccountBalanceToday(accountId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="43"
+                                    class="link-to-prism">src/consolidado.service.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obter os saldos em Credito e Debito de uma conta até a data atual</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>accountId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>unknown</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getUserAccountsBalance"></a>
                     <span class="name">
                             <span class="modifier">Async</span>
@@ -311,8 +386,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="43"
-                                    class="link-to-prism">src/consolidado.service.ts:43</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="62"
+                                    class="link-to-prism">src/consolidado.service.ts:62</a></div>
                         </td>
                     </tr>
 
@@ -401,6 +476,25 @@ export class ConsolidadoService {
 
     return this.dataSource.query(sql);
   }
+
+  /**
+   * Obter os saldos em Credito e Debito de uma conta até a data atual
+   * 
+   * @param accountId 
+   * @returns 
+   */
+  async getAccountBalanceToday(accountId: string) {
+    let sql &#x3D; &#x27; SELECT \
+                  COD_ENTRY_TYPE as tipoLancamento, \
+                  SUM(NUM_VALUE) as valor \
+                FROM  TB_ACCOUNTING_ENTRY \
+                WHERE COD_ACCOUNT_ID &#x3D; &#x27; + accountId + &#x27; \
+                AND DAT_DATE &lt;&#x3D; NOW \
+                GROUP BY COD_ENTRY_TYPE &#x27;;
+
+    return this.dataSource.query(sql);
+  }
+
 
   /**
    * Obter os saldos em Credito e Debito das contas de um utilizador

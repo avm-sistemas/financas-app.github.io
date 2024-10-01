@@ -964,7 +964,7 @@ export class ContaDetalheComponent implements OnInit {
         this.contaService.update(this.conta).subscribe(
           (retorno: any) &#x3D;&gt; {
             debugger;
-            this.ref.close(retorno.body);
+            this.ref.close(retorno);
           }
         );        
         break;
@@ -1020,7 +1020,10 @@ export class ContaDetalheComponent implements OnInit {
             &lt;input pInputText id&#x3D;&quot;float-input&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Descrição&quot; formControlName&#x3D;&quot;descricao&quot; style&#x3D;&quot;background-color: transparent;&quot;/&gt;
 
         &lt;/div&gt;
-    &lt;/div&gt;    
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;pt10px&quot; *ngIf&#x3D;&quot;this.modo !&#x3D; ModoExterno.Incluir &amp;&amp; this.modo !&#x3D; ModoExterno.Nenhum&quot;&gt;
+        &lt;app-saldos [idConta]&#x3D;&quot;id&quot;&gt;&lt;/app-saldos&gt;
+    &lt;/div&gt;
     &lt;div class&#x3D;&quot;grid&quot; style&#x3D;&quot;padding-top: 20px;&quot;&gt;
         &lt;div class&#x3D;&quot;col-6&quot;&gt;
             &lt;button pButton type&#x3D;&quot;button&quot; label&#x3D;&quot;Fechar&quot; class&#x3D;&quot;ui-button-raised p-button-warning&quot; 
@@ -1127,7 +1130,7 @@ export class ContaDetalheComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="height: 10px;"></div><ng-container *ngIf="modo === ModoExterno.Nenhum">    <p style="text-align: center;">        Sem Permissão    </p></ng-container>    <form [formGroup]="formConta">    <input type="hidden" formControlName="id" />    <div class="p-grid p-fluid">        <div class="p-col-12">            <label for="float-input">Nome da Conta</label><br>            <input pInputText id="float-input" type="text" formControlName="nome" placeholder="Nome da Conta" required />        </div>        <div class="p-col-12" style="padding-top: 10px;">            <label for="float-input">Descrição</label><br>            <input pInputText id="float-input" type="text" placeholder="Descrição" formControlName="descricao" style="background-color: transparent;"/>        </div>    </div>        <div class="grid" style="padding-top: 20px;">        <div class="col-6">            <button pButton type="button" label="Fechar" class="ui-button-raised p-button-warning"             (click)="fechar()"></button>        </div>        <div class="col-6" style="float:right;text-align: right;" *ngIf="this.modo != ModoExterno.Consultar && this.modo != ModoExterno.Nenhum">            <button pButton type="button" label="Gravar" class="ui-button-raised p-button-success"             (click)="submitConta()"></button>        </div>    </div>    </form>    </div>'
+        var COMPONENT_TEMPLATE = '<div><div style="height: 10px;"></div><ng-container *ngIf="modo === ModoExterno.Nenhum">    <p style="text-align: center;">        Sem Permissão    </p></ng-container>    <form [formGroup]="formConta">    <input type="hidden" formControlName="id" />    <div class="p-grid p-fluid">        <div class="p-col-12">            <label for="float-input">Nome da Conta</label><br>            <input pInputText id="float-input" type="text" formControlName="nome" placeholder="Nome da Conta" required />        </div>        <div class="p-col-12" style="padding-top: 10px;">            <label for="float-input">Descrição</label><br>            <input pInputText id="float-input" type="text" placeholder="Descrição" formControlName="descricao" style="background-color: transparent;"/>        </div>    </div>    <div class="pt10px" *ngIf="this.modo != ModoExterno.Incluir && this.modo != ModoExterno.Nenhum">        <app-saldos [idConta]="id"></app-saldos>    </div>    <div class="grid" style="padding-top: 20px;">        <div class="col-6">            <button pButton type="button" label="Fechar" class="ui-button-raised p-button-warning"             (click)="fechar()"></button>        </div>        <div class="col-6" style="float:right;text-align: right;" *ngIf="this.modo != ModoExterno.Consultar && this.modo != ModoExterno.Nenhum">            <button pButton type="button" label="Gravar" class="ui-button-raised p-button-success"             (click)="submitConta()"></button>        </div>    </div>    </form>    </div>'
     var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
     var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
     var ACTUAL_COMPONENT = {'name': 'ContaDetalheComponent'};

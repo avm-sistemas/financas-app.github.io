@@ -133,6 +133,12 @@
     </p>
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>AfterViewInit</code>
+    </p>
 
 
 <section data-compodoc="block-metadata">
@@ -210,6 +216,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
@@ -233,12 +242,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(config: PrimeNGConfig, translateService: TranslateService, router: Router)</code>
+<code>constructor(config: PrimeNGConfig, translateService: TranslateService, router: Router, swUpdate: SwUpdate)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -291,6 +300,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>swUpdate</td>
+                                                  
+                                                        <td>
+                                                                    <code>SwUpdate</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -313,6 +334,43 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="62"
+                                    class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <span ><b>ngOnInit</b></span>
@@ -329,8 +387,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="23"
-                                    class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:23</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="79"
+                                    class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:79</a></div>
                         </td>
                     </tr>
 
@@ -368,8 +426,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="32"
-                                    class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:32</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="88"
+                                    class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:88</a></div>
                         </td>
                     </tr>
 
@@ -443,7 +501,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/_modules/_main/components/_main/main.component.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -456,10 +514,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component } from &#x27;@angular/core&#x27;;
 import { PrimeNGConfig, Translation } from &#x27;primeng/api&#x27;;
 import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
 import { NavigationEnd, Router } from &#x27;@angular/router&#x27;;
+import { SwUpdate } from &#x27;@angular/service-worker&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
 
 /**
  * Principal Componente do Softare
@@ -469,10 +529,64 @@ import { NavigationEnd, Router } from &#x27;@angular/router&#x27;;
   templateUrl: &#x27;./main.component.html&#x27;,
   styleUrls: [&#x27;./main.component.scss&#x27;]
 })
-export class MainComponent {
+export class MainComponent implements AfterViewInit {
   constructor(private config: PrimeNGConfig, 
               private translateService: TranslateService, 
-              public router: Router) {
+              public router: Router,
+              private swUpdate: SwUpdate) {
+
+    if (&#x27;caches&#x27; in window) {
+      caches.keys()
+        .then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
+                return caches.delete(key);
+            }));
+        });
+    }                
+    
+    if (this.swUpdate.isEnabled) {      
+      this.swUpdate.versionUpdates.subscribe( (event: any) &#x3D;&gt; {
+        if (event.type &#x3D;&#x3D;&#x3D; &quot;VERSION_READY&quot;) {
+          if (!environment.production)
+            console.log(&#x27;PWA: Version is ready&#x27;);
+          window.location.reload();
+        }
+        if (event.type &#x3D;&#x3D;&#x3D; &quot;NO_NEW_VERSION_DETECTED&quot;) {
+          if (!environment.production)
+            console.log(&#x27;PWA: Nothing to update&#x27;);
+        }
+        if (event.type &#x3D;&#x3D;&#x3D; &quot;VERSION_DETECTED&quot;) {
+          if (!environment.production)   
+            console.log(&#x27;PWA: App has new version&#x27;);
+        }
+        if (event.type &#x3D;&#x3D;&#x3D; &quot;VERSION_INSTALLATION_FAILED&quot;) {
+          if (!environment.production)
+            console.log(&quot;PWA: Failure on version update&quot;, event.version.appData);
+        }        
+      });
+      this.swUpdate.checkForUpdate().then((thereis: boolean) &#x3D;&gt; {
+        if (thereis) {
+          this.swUpdate.activateUpdate()
+            .then( () &#x3D;&gt; window.location.reload())
+            .catch( (error) &#x3D;&gt; console.error(&#x27;PWA: Failed to apply new version updates: &#x27;, error));
+        }
+      }).catch((error) &#x3D;&gt; {
+        console.error(&#x27;PWA: Could not check for app updates&#x27;, error);
+      });  
+    } else return;    
+  }
+  ngAfterViewInit(): void {
+    //window.location.reload();
+    /*
+    if (&#x27;serviceWorker&#x27; in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (const registration of registrations) {
+          // unregister service worker
+          console.log(&#x27;serviceWorker unregistered&#x27;);
+          registration.unregister();
+        }
+      });
+    }*/  
   }
 
   /**
@@ -499,7 +613,7 @@ export class MainComponent {
         <pre class="line-numbers"><code class="language-html">&lt;app-menu&gt;&lt;/app-menu&gt;
 &lt;p-toast [baseZIndex]&#x3D;&quot;50000&quot;&gt;&lt;/p-toast&gt;
 &lt;app-splash-screen&gt;&lt;/app-splash-screen&gt;
-&lt;div class&#x3D;&quot;content top-margin&quot;&gt;
+&lt;div class&#x3D;&quot;content top-margin height-total&quot;&gt;
     &lt;router-outlet&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
 </code></pre>
@@ -565,7 +679,7 @@ app-menu {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-menu></app-menu><p-toast [baseZIndex]="50000"></p-toast><app-splash-screen></app-splash-screen><div class="content top-margin">    <router-outlet></router-outlet></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-menu></app-menu><p-toast [baseZIndex]="50000"></p-toast><app-splash-screen></app-splash-screen><div class="content top-margin height-total">    <router-outlet></router-outlet></div></div>'
     var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
     var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
     var ACTUAL_COMPONENT = {'name': 'MainComponent'};
