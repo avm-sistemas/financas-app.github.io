@@ -1,0 +1,1487 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>financas-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">financas-app documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  LancamentoDetalheComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente de Detalhe de Lançamento</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-lancamento-detalhe</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./lancamento-detalhe.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./lancamento-detalhe.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#formLancamento" >formLancamento</a>
+                            </li>
+                            <li>
+                                <a href="#id" >id</a>
+                            </li>
+                            <li>
+                                <a href="#idConta" >idConta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#lancamento" >lancamento</a>
+                            </li>
+                            <li>
+                                <a href="#modo" >modo</a>
+                            </li>
+                            <li>
+                                <a href="#ModoExterno" >ModoExterno</a>
+                            </li>
+                            <li>
+                                <a href="#msgs" >msgs</a>
+                            </li>
+                            <li>
+                                <a href="#selectedPerfil" >selectedPerfil</a>
+                            </li>
+                            <li>
+                                <a href="#tiposDeLancamento" >tiposDeLancamento</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#configurarFormulario" >configurarFormulario</a>
+                            </li>
+                            <li>
+                                <a href="#criarLancamentoParaSubmeter" >criarLancamentoParaSubmeter</a>
+                            </li>
+                            <li>
+                                <a href="#fechar" >fechar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#submitLancamento" >submitLancamento</a>
+                            </li>
+                            <li>
+                                <a href="#transformarForm" >transformarForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: FormBuilder, ref: DynamicDialogRef, config: DynamicDialogConfig, lancamentoService: <a href="../injectables/LancamentoService.html" target="_self">LancamentoService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor / Injeção de Dependência</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ref</td>
+                                                  
+                                                        <td>
+                                                                    <code>DynamicDialogRef</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>config</td>
+                                                  
+                                                        <td>
+                                                                    <code>DynamicDialogConfig</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>lancamentoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LancamentoService.html" target="_self" >LancamentoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="configurarFormulario"></a>
+                    <span class="name">
+                        <span ><b>configurarFormulario</b></span>
+                        <a href="#configurarFormulario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>configurarFormulario()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="75"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Configurar formulário de acordo com o Modo</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="criarLancamentoParaSubmeter"></a>
+                    <span class="name">
+                        <span ><b>criarLancamentoParaSubmeter</b></span>
+                        <a href="#criarLancamentoParaSubmeter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>criarLancamentoParaSubmeter()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="139"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:139</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtém o DTO a partir do formulário preenchido</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../interfaces/ILancamento.html" target="_self" >ILancamento</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fechar"></a>
+                    <span class="name">
+                        <span ><b>fechar</b></span>
+                        <a href="#fechar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fechar()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="228"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:228</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Fechar o Modal</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="68"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Função OnInit</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitLancamento"></a>
+                    <span class="name">
+                        <span ><b>submitLancamento</b></span>
+                        <a href="#submitLancamento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitLancamento()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="172"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:172</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Submeter Formulário</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="transformarForm"></a>
+                    <span class="name">
+                        <span ><b>transformarForm</b></span>
+                        <a href="#transformarForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>transformarForm(lancamento: <a href="../interfaces/ILancamento.html" target="_self">ILancamento</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="118"
+                                    class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:118</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Transforma o DTO de Lançamento em Dados do Formulário</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>lancamento</td>
+                                            <td>
+                                                            <code><a href="../interfaces/ILancamento.html" target="_self" >ILancamento</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>FormGroup</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>Date.now</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formLancamento"></a>
+                    <span class="name">
+                        <span ><b>formLancamento</b></span>
+                        <a href="#formLancamento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.transformarForm(this.lancamento)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="id"></a>
+                    <span class="name">
+                        <span ><b>id</b></span>
+                        <a href="#id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="idConta"></a>
+                    <span class="name">
+                        <span ><b>idConta</b></span>
+                        <a href="#idConta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lancamento"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>lancamento</b></span>
+                        <a href="#lancamento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ILancamento.html" target="_self" >ILancamento</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Lancamento()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modo"></a>
+                    <span class="name">
+                        <span ><b>modo</b></span>
+                        <a href="#modo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ModoDeEdicaoFormulario" target="_self" >ModoDeEdicaoFormulario</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>ModoDeEdicaoFormulario.Nenhum</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ModoExterno"></a>
+                    <span class="name">
+                        <span ><b>ModoExterno</b></span>
+                        <a href="#ModoExterno"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>ModoDeEdicaoFormulario</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="msgs"></a>
+                    <span class="name">
+                        <span ><b>msgs</b></span>
+                        <a href="#msgs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Message[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedPerfil"></a>
+                    <span class="name">
+                        <span ><b>selectedPerfil</b></span>
+                        <a href="#selectedPerfil"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tiposDeLancamento"></a>
+                    <span class="name">
+                        <span ><b>tiposDeLancamento</b></span>
+                        <a href="#tiposDeLancamento"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      tipo: &#x27;Debito&#x27;,
+      value: &#x27;D&#x27;
+    },
+    {
+      tipo: &#x27;Credito&#x27;,
+      value: &#x27;C&#x27;
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/_modules/aplicativo/components/lancamento-detalhe/lancamento-detalhe.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { Message, MessageService } from &#x27;primeng/api&#x27;;
+import { DynamicDialogConfig, DynamicDialogRef } from &#x27;primeng/dynamicdialog&#x27;;
+
+import { ILancamento } from &#x27;../../interfaces/ilancamento.interface&#x27;;
+import { Lancamento } from &#x27;../../models/lancamento.model&#x27;;
+import { AplicativoService } from &#x27;../../services/aplicativo.service&#x27;;
+import { ModoDeEdicaoFormulario } from &#x27;src/_modules/core/enums/modo-de-edicao-formulario&#x27;;
+import { LancamentoService } from &#x27;../../services/lancamento.service&#x27;;
+import { IResponse } from &#x27;src/_modules/core/interfaces/iresponse.interface&#x27;;
+
+/**
+ * Componente de Detalhe de Lançamento
+ */
+@Component({
+  selector: &#x27;app-lancamento-detalhe&#x27;,
+  templateUrl: &#x27;./lancamento-detalhe.component.html&#x27;,
+  styleUrls: [&#x27;./lancamento-detalhe.component.scss&#x27;]
+})
+export class LancamentoDetalheComponent implements OnInit {
+
+  id: string &#x3D; &quot;&quot;;
+  modo: ModoDeEdicaoFormulario &#x3D; ModoDeEdicaoFormulario.Nenhum;
+  idConta: string &#x3D; &quot;&quot;;
+
+  private lancamento: ILancamento &#x3D; new Lancamento();
+
+  selectedPerfil: string &#x3D; &quot;&quot;
+  data &#x3D; Date.now;
+  ModoExterno &#x3D; ModoDeEdicaoFormulario;
+
+  formLancamento: FormGroup &#x3D; this.transformarForm(this.lancamento);
+
+  msgs: Message[] &#x3D; [];
+
+  tiposDeLancamento &#x3D; [
+    {
+      tipo: &#x27;Debito&#x27;,
+      value: &#x27;D&#x27;
+    },
+    {
+      tipo: &#x27;Credito&#x27;,
+      value: &#x27;C&#x27;
+    },
+  ]
+
+  /**
+   * Constructor / Injeção de Dependência
+   * 
+   * @param {FormBuilder} fb 
+   * @param {DynamicDialogRef} ref 
+   * @param {DynamicDialogConfig} config 
+   * @param {AplicativoService} applicativoService 
+   * @param {MessageService} messageService 
+   * @param {LancamentoService} lancamentoService 
+   */
+  constructor(private fb: FormBuilder,
+              private ref: DynamicDialogRef,
+              private config: DynamicDialogConfig,                            
+              private lancamentoService: LancamentoService) {
+
+  }
+
+  /**
+   * Função OnInit
+   */
+  ngOnInit(): void {
+    this.configurarFormulario()
+  }
+
+  /**
+   * Configurar formulário de acordo com o Modo
+   */
+  configurarFormulario(): void {    
+    this.id &#x3D; this.config.data?.id;
+    this.modo &#x3D; this.config.data?.modo;
+    this.idConta &#x3D; this.config.data?.idConta;
+
+
+    switch(this.modo) {
+      case ModoDeEdicaoFormulario.Editar:
+      case ModoDeEdicaoFormulario.Excluir:
+      case ModoDeEdicaoFormulario.Consultar: {
+        this.lancamentoService.getById(this.id).subscribe(
+          (retorno: IResponse) &#x3D;&gt; {
+            debugger;
+            if (retorno.success) {  
+              this.lancamento &#x3D; retorno.data;
+              this.formLancamento &#x3D; this.transformarForm(this.lancamento);                  
+            }
+          }
+        )
+        break;
+      }
+      case ModoDeEdicaoFormulario.Incluir: {
+        this.lancamento &#x3D; new Lancamento();
+        this.lancamento.data &#x3D; new Date();
+        this.formLancamento &#x3D; this.transformarForm(this.lancamento);
+        break;
+      }
+      default: {
+        console.log(&#x27;ihhh! falha nossa!&#x27;)
+        break;
+      }
+    }
+
+    if(this.modo &#x3D;&#x3D; ModoDeEdicaoFormulario.Consultar || this.modo &#x3D;&#x3D; ModoDeEdicaoFormulario.Excluir)
+      this.formLancamento.disable()
+  }
+
+  /**
+   * Transforma o DTO de Lançamento em Dados do Formulário
+   * 
+   * @param lancamento 
+   * @returns 
+   */
+  transformarForm(lancamento: ILancamento): FormGroup {        
+    const formLancamento &#x3D; this.fb.group({
+      id: new FormControl( lancamento.id ),
+      uuid: new FormControl( lancamento.uuid ),
+      titulo: new FormControl( lancamento.titulo, [Validators.required, Validators.minLength(3), Validators.maxLength(100)]),
+      descricao: new FormControl( lancamento.descricao, [Validators.maxLength(100)]),
+      dataLancamento: new FormControl( lancamento.data ),
+      categorias: new FormControl( lancamento.categorias.toString() ),
+      image: new FormControl( lancamento.image ),      
+      tipoLancamento: new FormControl( lancamento.tipoLancamento ),
+      valor: new FormControl( lancamento.valor, [Validators.required])
+    });
+
+    return formLancamento;
+  }
+
+  /**
+   * Obtém o DTO a partir do formulário preenchido
+   * 
+   * @returns 
+   */
+  criarLancamentoParaSubmeter(): ILancamento {    
+    const lancamento &#x3D; new Lancamento();        
+
+    if (this.modo !&#x3D;&#x3D; ModoDeEdicaoFormulario.Incluir) {
+      lancamento.id &#x3D; this.formLancamento.controls.id.value;      
+      lancamento.uuid &#x3D; this.formLancamento.controls.uuid.value;
+    }  
+
+    lancamento.titulo &#x3D; this.formLancamento.controls.titulo.value;
+    lancamento.descricao &#x3D; this.formLancamento.controls.descricao.value;
+    lancamento.data &#x3D; this.formLancamento.controls.dataLancamento.value;
+    const categorias &#x3D; this.formLancamento.controls.categorias.value;
+    lancamento.categorias &#x3D; categorias.toString();
+
+    lancamento.image &#x3D; this.formLancamento.controls.image.value;    
+    lancamento.tipoLancamento &#x3D; this.formLancamento.controls.tipoLancamento.value;
+    lancamento.valor &#x3D; this.formLancamento.controls.valor.value;
+    
+    lancamento.contaId &#x3D; Number.parseInt(this.idConta);        
+    console.log(&#x27;inclusao na conta &#x3D;&gt; &#x27;, lancamento.contaId);
+
+    if (lancamento.tipoLancamento &#x3D;&#x3D; &#x27;D&#x27;) {
+      if (lancamento.valor &gt; 0) {
+        lancamento.valor &#x3D; lancamento.valor * -1;
+      }      
+    }
+
+    return lancamento;
+  }
+
+  /**
+   * Submeter Formulário
+   */
+  submitLancamento(){
+    switch(this.modo) {
+      case ModoDeEdicaoFormulario.Consultar: {
+        this.ref.close();
+        break;
+      }
+      case ModoDeEdicaoFormulario.Incluir: {
+        this.lancamento &#x3D; this.criarLancamentoParaSubmeter();        
+        debugger;
+        this.lancamentoService
+        .create(this.lancamento).subscribe(
+          (retorno: any) &#x3D;&gt; {          
+          if (retorno.body.success) {
+            this.ref.close(retorno.body);
+          }
+        },(error: any) &#x3D;&gt; {
+          console.log(&#x27;insert error&#x27;, error);          
+        });                
+        break;
+      }
+      case ModoDeEdicaoFormulario.Editar: {        
+        this.lancamento &#x3D; this.criarLancamentoParaSubmeter();        
+        debugger;
+        this.lancamentoService
+        .update(this.lancamento).subscribe( 
+          (retorno: any) &#x3D;&gt; {
+            if (retorno.body.success) {
+              this.ref.close(retorno.body);
+            }
+        },(error: any) &#x3D;&gt; {
+          console.log(&#x27;update error&#x27;, error);          
+        });
+        break;
+      }
+      case ModoDeEdicaoFormulario.Excluir: {        
+        this.lancamento &#x3D; this.criarLancamentoParaSubmeter();
+        debugger;
+        this.lancamentoService
+        .delete(this.lancamento).subscribe( (retorno: any) &#x3D;&gt; {
+          this.ref.close(retorno.body);                    
+        });                
+        break;
+      }
+      case ModoDeEdicaoFormulario.Nenhum: {
+        this.ref.close();
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+  }
+
+  /**
+   * Fechar o Modal
+   */
+  fechar(): void {
+    this.ref.close();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;height: 10px;&quot;&gt;&lt;/div&gt;
+&lt;ng-container *ngIf&#x3D;&quot;modo &#x3D;&#x3D;&#x3D; ModoExterno.Nenhum&quot;&gt;
+    &lt;p style&#x3D;&quot;text-align: center;&quot;&gt;
+        Sem Permissão
+    &lt;/p&gt;
+&lt;/ng-container&gt;
+    
+&lt;form [formGroup]&#x3D;&quot;formLancamento&quot; style&#x3D;&quot;margin-top: -25px;&quot;&gt;
+    &lt;input type&#x3D;&quot;hidden&quot; formControlName&#x3D;&quot;id&quot; /&gt;
+      &lt;p-panel header&#x3D;&quot;LANÇAMENTO&quot;&gt;
+        &lt;div class&#x3D;&quot;grid&quot; style&#x3D;&quot;padding-top: 10px;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;tp-lancamento&quot;&gt;
+                    &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
+                        &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class&#x3D;&quot;p-float-label&quot;&gt;                        
+                            &lt;p-dropdown class&#x3D;&quot;dpTipoLancamento&quot; pInput [options]&#x3D;&quot;tiposDeLancamento&quot; formControlName&#x3D;&quot;tipoLancamento&quot; optionLabel&#x3D;&quot;tipo&quot; optionValue&#x3D;&quot;value&quot;&gt;&lt;/p-dropdown&gt;                        
+                            &lt;label for&#x3D;&quot;tiposDeLancamento&quot;&gt;Tipo de Lançamento&lt;/label&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;                        
+                        &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-calendar&quot;&gt;&lt;/i&gt;&lt;/span&gt;                        
+                        &lt;span class&#x3D;&quot;p-float-label-fake&quot;&gt;                            
+                            &lt;input pInput id&#x3D;&quot;dataLancamento&quot; type&#x3D;&quot;date&quot; formControlName&#x3D;&quot;dataLancamento&quot; required style&#x3D;&quot;height:36px;border:0.5px solid lightgray&quot; /&gt;
+                            &lt;!--
+                            &lt;p-calendar formControlName&#x3D;&quot;dataLancamento&quot;
+                                        [showIcon]&#x3D;&quot;false&quot; 
+                                        [showOnFocus]&#x3D;&quot;true&quot; 
+                                        inputId&#x3D;&quot;dataLancamento&quot;
+                                        id&#x3D;&quot;dataLancamento&quot; /&gt;
+                            --&gt;                            
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;grid&quot; style&#x3D;&quot;padding-top: 10px;&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;                    
+                        &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                            &lt;!--
+                            &lt;p-inputSwitch id&#x3D;&quot;float-input&quot; name&#x3D;&quot;isConsolidado&quot; formControlName&#x3D;&quot;isConsolidado&quot; &gt;&lt;/p-inputSwitch&gt;                        
+                            &lt;label for&#x3D;&quot;float-input&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Consolidado&lt;/label&gt;
+                            --&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;                
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
+                        &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-dollar&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class&#x3D;&quot;p-float-label&quot;&gt;                        
+                            &lt;p-inputNumber id&#x3D;&quot;valor-titulo&quot; formControlName&#x3D;&quot;valor&quot; mode&#x3D;&quot;decimal&quot; [maxFractionDigits]&#x3D;&quot;2&quot; &gt;&lt;/p-inputNumber&gt;
+                            &lt;label for&#x3D;&quot;valor-titulo&quot;&gt;Valor do Título&lt;/label&gt;
+                        &lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;    
+    
+            
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;grid&quot;&gt;
+
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
+                    &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                        &lt;input id&#x3D;&quot;titulo&quot; type&#x3D;&quot;text&quot; maxlength&#x3D;&quot;100&quot; pInputText formControlName&#x3D;&quot;titulo&quot; aria-describedby&#x3D;&quot;titulo-help&quot; placeholder&#x3D;&quot;&quot; required /&gt;
+                        &lt;label for&#x3D;&quot;titulo&quot;&gt;Titulo&lt;/label&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;small id&#x3D;&quot;lancamento-help&quot; class&#x3D;&quot;p-error&quot; *ngIf&#x3D;&quot;formLancamento.controls[&#x27;titulo&#x27;].errors &amp;&amp; formLancamento.controls[&#x27;titulo&#x27;].dirty&quot;&gt;Titulo inválido&lt;/small&gt;
+            &lt;/div&gt;
+    
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
+                    &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-info-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                        &lt;textarea id&#x3D;&quot;descricao&quot; pInputText formControlName&#x3D;&quot;descricao&quot; rows&#x3D;&quot;3&quot; cols&#x3D;&quot;20&quot;&gt;&lt;/textarea&gt;
+                        &lt;label for&#x3D;&quot;descricao&quot;&gt;Descrição&lt;/label&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;small id&#x3D;&quot;email-help&quot; class&#x3D;&quot;p-error&quot; *ngIf&#x3D;&quot;formLancamento.controls[&#x27;descricao&#x27;].errors &amp;&amp; formLancamento.controls[&#x27;descricao&#x27;].dirty&quot;&gt;Descrição inválida&lt;/small&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+                &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;
+                    &lt;span class&#x3D;&quot;p-inputgroup-addon&quot;&gt;&lt;i class&#x3D;&quot;pi pi-tags&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                        &lt;!--&lt;p-chips id&#x3D;&quot;float-input&quot; separator&#x3D;&quot;,&quot; formControlName&#x3D;&quot;categorias&quot;&gt;&lt;/p-chips&gt;--&gt;
+                        &lt;input id&#x3D;&quot;categorias&quot; pInputText formControlName&#x3D;&quot;categorias&quot; placeholder&#x3D;&quot;informe separado por virgulas&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+                        &lt;label for&#x3D;&quot;categorias&quot;&gt;Categorias&lt;/label&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;padding-top: 20px;&quot;&gt;
+                &lt;div class&#x3D;&quot;p-inputgroup&quot;&gt;                    
+                    &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/p-panel&gt;
+
+    &lt;div&gt;
+        &lt;div class&#x3D;&quot;grid&quot; style&#x3D;&quot;padding-top: 20px;&quot;&gt;
+            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+              &lt;button pButton type&#x3D;&quot;button&quot; label&#x3D;&quot;Fechar&quot; class&#x3D;&quot;ui-button-raised p-button-warning&quot; 
+                (click)&#x3D;&quot;fechar()&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;          
+          
+            &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;float:right;text-align: right;&quot; *ngIf&#x3D;&quot;this.modo !&#x3D; ModoExterno.Consultar &amp;&amp; this.modo !&#x3D; ModoExterno.Nenhum&quot;&gt;
+              &lt;button pButton type&#x3D;&quot;button&quot; label&#x3D;&quot;Registar&quot; class&#x3D;&quot;ui-button-raised p-button-success&quot; 
+                (click)&#x3D;&quot;submitLancamento()&quot; [disabled]&#x3D;&quot;!formLancamento.valid&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;!formLancamento.valid&quot;&gt;
+        {{ formLancamento.errors  }}
+
+    &lt;/div&gt;
+&lt;/form&gt;    
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./lancamento-detalhe.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">//@import &quot;../../../../assets/scss/rwd-queries&quot;;
+
+/*
+::ng-deep .p-dropdown&gt;.p-component {
+    width: unset !important;  
+}
+
+::ng-deep .p-inputgroup .p-inputtext, .p-fluid .p-inputgroup .p-inputtext, .p-inputgroup .p-inputwrapper, .p-inputgroup .p-inputwrapper&gt;.p-component {    
+    width: unset !important;  
+}
+
+::ng-deep .tp-lancamento .p-inputgroup .p-inputtext, .tp-lancamento.p-fluid .p-inputgroup .p-inputtext, .tp-lancamento.p-inputgroup .p-inputwrapper, .tp-lancamento .p-inputgroup .p-inputwrapper&gt;.p-component {
+    flex: 1 1 auto;
+    width: 100% !important; 
+}
+
+*/
+
+textarea.p-inputtext {
+    min-width: 100%;
+    resize: none;
+}
+
+/*
+::ng-deep .p-panel {
+    @include onlyMobile {
+        //margin-right: 30px !important;
+    }
+}
+::ng-deep .panel-header {
+    @include onlyMobile {
+        margin-right: 30px !important;
+    }
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+    @include onlyMobile {
+        padding-right: 60px !important;
+    }
+}*/</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div style="height: 10px;"></div><ng-container *ngIf="modo === ModoExterno.Nenhum">    <p style="text-align: center;">        Sem Permissão    </p></ng-container>    <form [formGroup]="formLancamento" style="margin-top: -25px;">    <input type="hidden" formControlName="id" />      <p-panel header="LANÇAMENTO">        <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="tp-lancamento">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                        <span class="p-float-label">                                                    <p-dropdown class="dpTipoLancamento" pInput [options]="tiposDeLancamento" formControlName="tipoLancamento" optionLabel="tipo" optionValue="value"></p-dropdown>                                                    <label for="tiposDeLancamento">Tipo de Lançamento</label>                        </span>                    </div>                    </div>                </div>                    <div class="col-6">                    <div class="p-inputgroup">                                                <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>                                                <span class="p-float-label-fake">                                                        <input pInput id="dataLancamento" type="date" formControlName="dataLancamento" required style="height:36px;border:0.5px solid lightgray" />                            <!--                            <p-calendar formControlName="dataLancamento"                                        [showIcon]="false"                                         [showOnFocus]="true"                                         inputId="dataLancamento"                                        id="dataLancamento" />                            -->                                                    </span>                    </div>                </div>            </div>            <div class="grid" style="padding-top: 10px;">                <div class="col-6">                    <div class="p-inputgroup">                                            <span class="p-float-label">                            <!--                            <p-inputSwitch id="float-input" name="isConsolidado" formControlName="isConsolidado" ></p-inputSwitch>                                                    <label for="float-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consolidado</label>                            -->                        </span>                    </div>                                </div>                <div class="col-6">                    <div class="p-inputgroup">                        <span class="p-inputgroup-addon"><i class="pi pi-dollar"></i></span>                        <span class="p-float-label">                                                    <p-inputNumber id="valor-titulo" formControlName="valor" mode="decimal" [maxFractionDigits]="2" ></p-inputNumber>                            <label for="valor-titulo">Valor do Título</label>                        </span>                    </div>                </div>                            </div>        <div class="grid">            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <input id="titulo" type="text" maxlength="100" pInputText formControlName="titulo" aria-describedby="titulo-help" placeholder="" required />                        <label for="titulo">Titulo</label>                    </span>                </div>                <small id="lancamento-help" class="p-error" *ngIf="formLancamento.controls[\'titulo\'].errors && formLancamento.controls[\'titulo\'].dirty">Titulo inválido</small>            </div>                <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-info-circle"></i></span>                    <span class="p-float-label">                        <textarea id="descricao" pInputText formControlName="descricao" rows="3" cols="20"></textarea>                        <label for="descricao">Descrição</label>                    </span>                </div>                <small id="email-help" class="p-error" *ngIf="formLancamento.controls[\'descricao\'].errors && formLancamento.controls[\'descricao\'].dirty">Descrição inválida</small>            </div>            <div class="col-12">                <div class="p-inputgroup">                    <span class="p-inputgroup-addon"><i class="pi pi-tags"></i></span>                    <span class="p-float-label">                        <!--<p-chips id="float-input" separator="," formControlName="categorias"></p-chips>-->                        <input id="categorias" pInputText formControlName="categorias" placeholder="informe separado por virgulas" style="width: 100%;">                        <label for="categorias">Categorias</label>                    </span>                </div>            </div>            <div class="col-6" style="padding-top: 20px;">                <div class="p-inputgroup">                                        <span class="p-float-label">                    </span>                </div>            </div>        </div>      </p-panel>    <div>        <div class="grid" style="padding-top: 20px;">            <div class="col-6">              <button pButton type="button" label="Fechar" class="ui-button-raised p-button-warning"                 (click)="fechar()"></button>            </div>                                <div class="col-6" style="float:right;text-align: right;" *ngIf="this.modo != ModoExterno.Consultar && this.modo != ModoExterno.Nenhum">              <button pButton type="button" label="Registar" class="ui-button-raised p-button-success"                 (click)="submitLancamento()" [disabled]="!formLancamento.valid"></button>            </div>        </div>    </div>    <div *ngIf="!formLancamento.valid">        {{ formLancamento.errors  }}    </div></form>    </div>'
+    var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
+    var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
+    var ACTUAL_COMPONENT = {'name': 'LancamentoDetalheComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LancamentoDetalheComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

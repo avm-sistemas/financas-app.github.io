@@ -1,0 +1,1535 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>financas-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">financas-app documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  ContasComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/_modules/aplicativo/components/contas/contas.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente de Contas</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-contas</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./contas.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./contas.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_contas" >_contas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#aplicativoService" >aplicativoService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#conta" >conta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#contas$" >contas$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#contaService" >contaService</a>
+                            </li>
+                            <li>
+                                <a href="#contasSelecionados" >contasSelecionados</a>
+                            </li>
+                            <li>
+                                <a href="#sortField" >sortField</a>
+                            </li>
+                            <li>
+                                <a href="#sortMode" >sortMode</a>
+                            </li>
+                            <li>
+                                <a href="#sortOrder" >sortOrder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#splashScreenService" >splashScreenService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#consultarConta" >consultarConta</a>
+                            </li>
+                            <li>
+                                <a href="#editarConta" >editarConta</a>
+                            </li>
+                            <li>
+                                <a href="#excluirConta" >excluirConta</a>
+                            </li>
+                            <li>
+                                <a href="#excluirContasSelecionados" >excluirContasSelecionados</a>
+                            </li>
+                            <li>
+                                <a href="#incluirConta" >incluirConta</a>
+                            </li>
+                            <li>
+                                <a href="#loadAccounts" >loadAccounts</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(aplicativoService: <a href="../injectables/AplicativoService.html" target="_self">AplicativoService</a>, splashScreenService: <a href="../injectables/SplashScreenService.html" target="_self">SplashScreenService</a>, dialogService: DialogService, confirmationService: ConfirmationService, screenService: <a href="../injectables/ScreenService.html" target="_self">ScreenService</a>, contaService: <a href="../injectables/ContaService.html" target="_self">ContaService</a>, msgService: MessageService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor / Injeção de Dependência</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>aplicativoService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AplicativoService.html" target="_self" >AplicativoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>splashScreenService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SplashScreenService.html" target="_self" >SplashScreenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialogService</td>
+                                                  
+                                                        <td>
+                                                                    <code>DialogService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmationService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ConfirmationService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>screenService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ScreenService.html" target="_self" >ScreenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>contaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ContaService.html" target="_self" >ContaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>msgService</td>
+                                                  
+                                                        <td>
+                                                                    <code>MessageService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="consultarConta"></a>
+                    <span class="name">
+                        <span ><b>consultarConta</b></span>
+                        <a href="#consultarConta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>consultarConta(conta: <a href="../interfaces/IConta.html" target="_self">IConta</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="91"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Consultar Conta</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conta</td>
+                                            <td>
+                                                            <code><a href="../interfaces/IConta.html" target="_self" >IConta</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editarConta"></a>
+                    <span class="name">
+                        <span ><b>editarConta</b></span>
+                        <a href="#editarConta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editarConta(conta: <a href="../interfaces/IConta.html" target="_self">IConta</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="139"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:139</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Editar Conta</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conta</td>
+                                            <td>
+                                                            <code><a href="../interfaces/IConta.html" target="_self" >IConta</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="excluirConta"></a>
+                    <span class="name">
+                        <span ><b>excluirConta</b></span>
+                        <a href="#excluirConta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>excluirConta(conta: <a href="../interfaces/IConta.html" target="_self">IConta</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="168"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:168</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Excluir Conta</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>conta</td>
+                                            <td>
+                                                            <code><a href="../interfaces/IConta.html" target="_self" >IConta</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="excluirContasSelecionados"></a>
+                    <span class="name">
+                        <span ><b>excluirContasSelecionados</b></span>
+                        <a href="#excluirContasSelecionados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>excluirContasSelecionados()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="201"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:201</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Excluir contas selecionadas</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="incluirConta"></a>
+                    <span class="name">
+                        <span ><b>incluirConta</b></span>
+                        <a href="#incluirConta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>incluirConta()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="108"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Incluir Conta</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadAccounts"></a>
+                    <span class="name">
+                        <span ><b>loadAccounts</b></span>
+                        <a href="#loadAccounts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadAccounts()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="65"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Carregar todas as contas do utilizador</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Função OnInit</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_contas"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_contas</b></span>
+                        <a href="#_contas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new BehaviorSubject&lt;Conta[]&gt;( [] )</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="aplicativoService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>aplicativoService</b></span>
+                        <a href="#aplicativoService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/AplicativoService.html" target="_self" >AplicativoService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="conta"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>conta</b></span>
+                        <a href="#conta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IConta.html" target="_self" >IConta</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contas$"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>contas$</b></span>
+                        <a href="#contas$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this._contas.asObservable()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contaService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>contaService</b></span>
+                        <a href="#contaService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/ContaService.html" target="_self" >ContaService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contasSelecionados"></a>
+                    <span class="name">
+                        <span ><b>contasSelecionados</b></span>
+                        <a href="#contasSelecionados"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IConta.html" target="_self" >IConta[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortField"></a>
+                    <span class="name">
+                        <span ><b>sortField</b></span>
+                        <a href="#sortField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortMode"></a>
+                    <span class="name">
+                        <span ><b>sortMode</b></span>
+                        <a href="#sortMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortOrder"></a>
+                    <span class="name">
+                        <span ><b>sortOrder</b></span>
+                        <a href="#sortOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="splashScreenService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>splashScreenService</b></span>
+                        <a href="#splashScreenService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/SplashScreenService.html" target="_self" >SplashScreenService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/_modules/aplicativo/components/contas/contas.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ConfirmationService, MessageService } from &#x27;primeng/api&#x27;;
+import { DialogService } from &#x27;primeng/dynamicdialog&#x27;;
+import { SplashScreenService } from &#x27;src/_modules/core/services/splash-screen.service&#x27;;
+import { ModoDeEdicaoFormulario } from &#x27;src/_modules/core/enums/modo-de-edicao-formulario&#x27;;
+import { IConta } from &#x27;../../interfaces/iconta.interface&#x27;;
+import { Conta } from &#x27;../../models/conta.model&#x27;;
+import { AplicativoService } from &#x27;../../services/aplicativo.service&#x27;;
+import { ContaDetalheComponent } from &#x27;../conta-detalhe/conta-detalhe.component&#x27;;
+import { ScreenService } from &#x27;src/_modules/core/services/screen.service&#x27;;
+
+import { ContaService } from &#x27;../../services/conta.service&#x27;;
+import { BehaviorSubject } from &#x27;rxjs&#x27;;
+
+/**
+ * Componente de Contas
+ */
+@Component({
+  selector: &#x27;app-contas&#x27;,
+  templateUrl: &#x27;./contas.component.html&#x27;,
+  styleUrls: [&#x27;./contas.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class ContasComponent implements OnInit {
+
+  private _contas &#x3D; new BehaviorSubject&lt;Conta[]&gt;( [] );
+  public contas$ &#x3D; this._contas.asObservable();
+
+  conta?: IConta;  
+  contasSelecionados: IConta[] &#x3D; [];
+
+  sortOrder: any;
+  sortField: any;  
+  sortMode: any;
+
+  /**
+   * Constructor / Injeção de Dependência
+   * 
+   * @param {AplicativoService} aplicativoService 
+   * @param {SplashScreenService} splashScreenService 
+   * @param {DialogService} dialogService 
+   * @param {ConfirmationService} confirmationService 
+   * @param {ScreenService} screenService 
+   * @param {ContaService} contaService 
+   */
+  constructor(public aplicativoService: AplicativoService,
+              public splashScreenService: SplashScreenService,
+              private dialogService: DialogService,              
+              private confirmationService: ConfirmationService,
+              private screenService: ScreenService,              
+              public contaService: ContaService,              
+              private msgService: MessageService) {       
+  }
+
+  /**
+   * Função OnInit
+   */
+  ngOnInit(): void {
+    this.loadAccounts();
+  }
+
+  /**
+   * Carregar todas as contas do utilizador
+   */
+  loadAccounts() {
+    try {
+      const id &#x3D; sessionStorage.getItem(&#x27;id&#x27;);
+      if (id) {
+        const idN &#x3D; id ? Number.parseInt(id) : 0;
+        this.contaService.getAllByUserId(idN.toString()).subscribe(
+              (retorno: any) &#x3D;&gt; {       
+                if (retorno.success) {
+                  this._contas.next([]);                  
+                  if (retorno.data &amp;&amp; retorno.data.length &gt; 0) {
+                    this._contas.next(retorno.data);
+                  }
+                }
+              }
+            );
+      }
+    } catch (error) {
+      console.log(&#x27;error &#x3D;&gt; &#x27;, error)
+    }
+  }
+
+  /**
+   * Consultar Conta
+   * 
+   * @param conta 
+   */
+  consultarConta(conta: IConta): void {
+    const ref &#x3D; this.dialogService.open(ContaDetalheComponent, {
+      data: {
+        id: conta.id,
+        modo: ModoDeEdicaoFormulario.Consultar
+      },
+      closeOnEscape: true,
+      showHeader: false,
+      header: &#x27;DETALHE DA CONTA&#x27;,
+      width: this.screenService.isMobile ? &#x27;100%&#x27; : &#x27;60%&#x27;
+    });
+  
+  }
+
+  /**
+   * Incluir Conta
+   */
+  incluirConta(): void {
+    this.conta &#x3D; new Conta();
+
+    const ref &#x3D; this.dialogService.open(ContaDetalheComponent, {
+      data: {
+        id: 0,
+        modo: ModoDeEdicaoFormulario.Incluir
+      },
+      closeOnEscape: true,
+      showHeader: false,
+      header: &#x27;NOVA CONTA&#x27;,
+      width: this.screenService.isMobile ? &#x27;100%&#x27; : &#x27;60%&#x27;
+    });
+
+    ref.onClose.subscribe( (retorno: any) &#x3D;&gt; {
+      if (retorno) {
+        this.msgService.add({
+          closable: true,
+          summary: &#x27;Conta incluída.&#x27;,
+          severity: &#x27;success&#x27;
+        });
+      }      
+      this.loadAccounts();
+    });
+  }
+
+  /**
+   * Editar Conta
+   * 
+   * @param conta 
+   */
+  editarConta(conta: IConta): void {
+    const ref &#x3D; this.dialogService.open(ContaDetalheComponent, {
+      data: {
+        id: conta.id,
+        modo: ModoDeEdicaoFormulario.Editar
+      },
+      closeOnEscape: true,
+      showHeader: false,
+      header: &#x27;EDITAR CONTA&#x27;,
+      width: this.screenService.isMobile ? &#x27;100%&#x27; : &#x27;60%&#x27;
+    });
+
+    ref.onClose.subscribe( (retorno: any) &#x3D;&gt; {
+      if (retorno) {
+        this.msgService.add({
+          closable: true,
+          summary: &#x27;Conta alterada.&#x27;,
+          severity: &#x27;success&#x27;
+        });
+      }      
+      this.loadAccounts();
+    });  
+  }
+
+  /**
+   * Excluir Conta
+   * 
+   * @param conta
+   */
+  excluirConta(conta: IConta): void {
+    this.confirmationService.confirm({
+      message: &#x27;Desejas excluir a conta &#x27; + conta.nome + &#x27;?&#x27;,
+      header: &#x27;Confirmação&#x27;,
+      icon: &#x27;pi pi-exclamation-triangle&#x27;,
+      accept: () &#x3D;&gt; {
+        this.contaService.delete(conta).subscribe(
+          (retorno: any) &#x3D;&gt; {
+            debugger;
+            if (retorno.body.success) {
+              this.msgService.add({
+                closable: true,
+                summary: &#x27;Conta excluída.&#x27;,
+                severity: &#x27;success&#x27;
+              });
+            } else {
+              this.msgService.add({
+                closable: true,
+                summary: &#x27;Conta não excluída.&#x27;,
+                severity: &#x27;error&#x27;,
+                detail: &#x27;Verifique se existem lançamentos na conta&#x27;
+              });              
+            }
+            this.loadAccounts();            
+          }
+        );
+      }
+    });    
+  }
+
+  /**
+   * Excluir contas selecionadas
+   */
+  excluirContasSelecionados(): void {
+    this.confirmationService.confirm({
+      message: &#x27;Desejas excluires as contas selecionadas?&#x27;,
+      header: &#x27;Confirm&#x27;,
+      icon: &#x27;pi pi-exclamation-triangle&#x27;,
+      accept: () &#x3D;&gt; {        
+        this.contasSelecionados?.forEach((data) &#x3D;&gt; {
+          this.contaService.delete(data).subscribe();
+        });  
+        this.contasSelecionados &#x3D; [];
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;p-toast /&gt;
+&lt;p-confirmDialog header&#x3D;&quot;Confirmação&quot; icon&#x3D;&quot;pi pi-exclamation-triangle&quot;&gt;&lt;/p-confirmDialog&gt;
+
+&lt;div class&#x3D;&quot;card&quot;&gt;
+    &lt;p-toolbar styleClass&#x3D;&quot;p-mb-1&quot;&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;left&quot;&gt;
+            &lt;button pButton pRipple label&#x3D;&quot;Nova Conta&quot; icon&#x3D;&quot;pi pi-plus&quot; class&#x3D;&quot;green-button&quot; (click)&#x3D;&quot;incluirConta()&quot;&gt;&lt;/button&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;right&quot;&gt;
+            &lt;div class&#x3D;&quot;grid&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;text-align: right;&quot;&gt;
+                    &lt;!--&lt;button pButton icon&#x3D;&quot;pi pi-folder&quot; iconPos&#x3D;&quot;left&quot; type&#x3D;&quot;button&quot; label&#x3D;&quot;Carregar&quot; title&#x3D;&quot;Carregar Banco de Dados&quot; class&#x3D;&quot;lightblue-button&quot;   style&#x3D;&quot;min-width: 120px;&quot;&gt;&lt;/button&gt;--&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;text-align: right;&quot;&gt;
+                    &lt;!--&lt;button pButton icon&#x3D;&quot;pi pi-save&quot; iconPos&#x3D;&quot;left&quot; type&#x3D;&quot;button&quot; label&#x3D;&quot;Gravar&quot; title&#x3D;&quot;Download do Banco de Dados&quot; class&#x3D;&quot;lightorange-button&quot; (click)&#x3D;&quot;aplicativoService.gravarConfiguracoes()&quot; style&#x3D;&quot;min-width: 120px;&quot;&gt;&lt;/button&gt;--&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ng-template&gt;
+    &lt;/p-toolbar&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;(contas$ | async) as tableContas&quot;&gt;
+        &lt;p-table #dt 
+        [value]&#x3D;&quot;tableContas&quot; 
+        [rows]&#x3D;&quot;10&quot; 
+        [paginator]&#x3D;&quot;true&quot; 
+        [globalFilterFields]&#x3D;&quot;[&#x27;nome&#x27;,&#x27;descricao&#x27;,&#x27;updatedAt&#x27;]&quot;
+        [(selection)]&#x3D;&quot;contasSelecionados&quot; 
+        [rowHover]&#x3D;&quot;true&quot; 
+        dataKey&#x3D;&quot;id&quot; 
+        [loading]&#x3D;&quot;splashScreenService.visible&quot;
+        filterBy&#x3D;&quot;nome&quot; [sortField]&#x3D;&quot;sortField&quot; [sortOrder]&#x3D;&quot;sortOrder&quot; [sortMode]&#x3D;&quot;sortMode&quot;
+        stateStorage&#x3D;&quot;local&quot; stateKey&#x3D;&quot;tableContas&quot;
+        [frozenColumns]&#x3D;&quot;[&#x27;nome&#x27;]&quot; 
+        [showLoader]&#x3D;&quot;true&quot;
+        [customSort]&#x3D;&quot;false&quot; [showFirstLastIcon]&#x3D;&quot;true&quot;
+        currentPageReportTemplate&#x3D;&quot;A exibir {first} ate {last} de {totalRecords} registos&quot; [showCurrentPageReport]&#x3D;&quot;false&quot;
+        csvSeparator&#x3D;&quot;;&quot; exportFilename&#x3D;&quot;contas&quot;&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;caption&quot;&gt;
+            &lt;div class&#x3D;&quot;grid conta-table-header&quot;&gt;
+                &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                    &lt;h2 class&#x3D;&quot;p-m-0&quot;&gt;Contas&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;text-align: right;&quot;&gt;
+                    &lt;input class&#x3D;&quot;conta-search-field&quot; #searchBox pInputText type&#x3D;&quot;text&quot; (input)&#x3D;&quot;dt.filterGlobal(searchBox.value, &#x27;contains&#x27;)&quot; placeholder&#x3D;&quot;Procurar Nome ...&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ng-template&gt;    
+        &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+            &lt;tr&gt;
+                &lt;th style&#x3D;&quot;width: 3rem&quot;&gt;
+                    &lt;p-tableHeaderCheckbox&gt;&lt;/p-tableHeaderCheckbox&gt;
+                &lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;nome&quot;&gt;Nome
+                    &lt;p-sortIcon field&#x3D;&quot;nome&quot; type&#x3D;&quot;text&quot;&gt;&lt;/p-sortIcon&gt; 
+                &lt;/th&gt;
+                &lt;th&gt;Descrição
+                    &lt;p-columnFilter type&#x3D;&quot;text&quot; field&#x3D;&quot;descricao&quot; display&#x3D;&quot;menu&quot;&gt;&lt;/p-columnFilter&gt; 
+                &lt;/th&gt;
+                &lt;!--
+                &lt;th [ngStyle]&#x3D;&quot;{&#x27;text-align&#x27;: &#x27;center&#x27; }&quot;&gt;Créditos&lt;/th&gt;
+                &lt;th [ngStyle]&#x3D;&quot;{&#x27;text-align&#x27;: &#x27;center&#x27; }&quot;&gt;Débitos&lt;/th&gt;
+                &lt;th [ngStyle]&#x3D;&quot;{&#x27;text-align&#x27;: &#x27;center&#x27; }&quot;&gt;Saldo Atual&lt;/th&gt;
+                --&gt;
+                &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-conta&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p-tableCheckbox [value]&#x3D;&quot;conta&quot;&gt;&lt;/p-tableCheckbox&gt;
+                &lt;/td&gt;
+                &lt;td&gt;{{ conta.nome }}&lt;/td&gt;
+                &lt;td&gt;
+                    {{ conta.descricao }}
+                &lt;/td&gt;
+                &lt;!--
+                &lt;td [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: &#x27;blue&#x27;,&#x27;text-align&#x27;: &#x27;center&#x27; }&quot;&gt;
+                    {{ conta.saldoCredito | number:&#x27;1.2-2&#x27; }}
+                &lt;/td&gt;
+                &lt;td [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: &#x27;red&#x27;, &#x27;text-align&#x27;: &#x27;center&#x27;}&quot;&gt;
+                    {{ conta.saldoDebito | number:&#x27;1.2-2&#x27; }}
+                &lt;/td&gt;
+                &lt;td [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: ((conta.saldoCredito - conta.saldoDebito) &gt; 0) ? &#x27;blue&#x27; : ((conta.saldoCredito - conta.saldoDebito) &#x3D;&#x3D; 0)? &#x27;black&#x27;: &#x27;red&#x27;, &#x27;text-align&#x27;: &#x27;center&#x27;}&quot;&gt;
+                    {{ (conta.saldoCredito - conta.saldoDebito) | number:&#x27;1.2-2&#x27; }}
+                &lt;/td&gt;
+                --&gt;
+                &lt;td [ngStyle]&#x3D;&quot;{&#x27;text-align&#x27;: &#x27;right&#x27; }&quot;&gt;
+                    &lt;button pButton pRipple icon&#x3D;&quot;pi pi-eye&quot; class&#x3D;&quot;p-button-rounded blue-button p-mr-2&quot; (click)&#x3D;&quot;consultarConta(conta)&quot;&gt;&lt;/button&gt;&amp;nbsp;
+                    &lt;button pButton pRipple icon&#x3D;&quot;pi pi-pencil&quot; class&#x3D;&quot;p-button-rounded orange-button p-mr-2&quot; (click)&#x3D;&quot;editarConta(conta)&quot;&gt;&lt;/button&gt;&amp;nbsp;
+                    &lt;button pButton pRipple icon&#x3D;&quot;pi pi-trash&quot; class&#x3D;&quot;p-button-rounded red-button&quot; (click)&#x3D;&quot;excluirConta(conta)&quot;&gt;&lt;/button&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;summary&quot;&gt;
+        &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+
+
+    &lt;/ng-container&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./contas.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;../../../../assets/scss/rwd-queries&#x27;;
+
+.p-datatable-header {
+    //padding-top: 44px;
+    @include mediumScreen {
+        height: 80px !important;
+    }
+    @media (max-width: 600px) {
+        height: 80px !important;
+    }
+}
+
+.conta-table-header {
+    height:50px !important;
+    @include mediumScreen {
+        height: 80px !important;
+    }
+    @media (max-width: 600px) {
+        height: 80px !important;
+    }
+}
+
+.conta-search-field {
+    @media (max-width: 600px) {
+        width: 160px;
+    }
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><p-toast /><p-confirmDialog header="Confirmação" icon="pi pi-exclamation-triangle"></p-confirmDialog><div class="card">    <p-toolbar styleClass="p-mb-1">        <ng-template pTemplate="left">            <button pButton pRipple label="Nova Conta" icon="pi pi-plus" class="green-button" (click)="incluirConta()"></button>        </ng-template>        <ng-template pTemplate="right">            <div class="grid">                <div class="col-6" style="text-align: right;">                    <!--<button pButton icon="pi pi-folder" iconPos="left" type="button" label="Carregar" title="Carregar Banco de Dados" class="lightblue-button"   style="min-width: 120px;"></button>-->                </div>                <div class="col-6" style="text-align: right;">                    <!--<button pButton icon="pi pi-save" iconPos="left" type="button" label="Gravar" title="Download do Banco de Dados" class="lightorange-button" (click)="aplicativoService.gravarConfiguracoes()" style="min-width: 120px;"></button>-->                </div>            </div>        </ng-template>    </p-toolbar>    <ng-container *ngIf="(contas$ | async) as tableContas">        <p-table #dt         [value]="tableContas"         [rows]="10"         [paginator]="true"         [globalFilterFields]="[\'nome\',\'descricao\',\'updatedAt\']"        [(selection)]="contasSelecionados"         [rowHover]="true"         dataKey="id"         [loading]="splashScreenService.visible"        filterBy="nome" [sortField]="sortField" [sortOrder]="sortOrder" [sortMode]="sortMode"        stateStorage="local" stateKey="tableContas"        [frozenColumns]="[\'nome\']"         [showLoader]="true"        [customSort]="false" [showFirstLastIcon]="true"        currentPageReportTemplate="A exibir {first} ate {last} de {totalRecords} registos" [showCurrentPageReport]="false"        csvSeparator=";" exportFilename="contas">        <ng-template pTemplate="caption">            <div class="grid conta-table-header">                <div class="col-6">                    <h2 class="p-m-0">Contas</h2>                </div>                <div class="col-6" style="text-align: right;">                    <input class="conta-search-field" #searchBox pInputText type="text" (input)="dt.filterGlobal(searchBox.value, \'contains\')" placeholder="Procurar Nome ..." />                </div>            </div>        </ng-template>            <ng-template pTemplate="header">            <tr>                <th style="width: 3rem">                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>                </th>                <th pSortableColumn="nome">Nome                    <p-sortIcon field="nome" type="text"></p-sortIcon>                 </th>                <th>Descrição                    <p-columnFilter type="text" field="descricao" display="menu"></p-columnFilter>                 </th>                <!--                <th [ngStyle]="{\'text-align\': \'center\' }">Créditos</th>                <th [ngStyle]="{\'text-align\': \'center\' }">Débitos</th>                <th [ngStyle]="{\'text-align\': \'center\' }">Saldo Atual</th>                -->                <th></th>            </tr>        </ng-template>        <ng-template pTemplate="body" let-conta>            <tr>                <td>                    <p-tableCheckbox [value]="conta"></p-tableCheckbox>                </td>                <td>{{ conta.nome }}</td>                <td>                    {{ conta.descricao }}                </td>                <!--                <td [ngStyle]="{\'color\': \'blue\',\'text-align\': \'center\' }">                    {{ conta.saldoCredito | number:\'1.2-2\' }}                </td>                <td [ngStyle]="{\'color\': \'red\', \'text-align\': \'center\'}">                    {{ conta.saldoDebito | number:\'1.2-2\' }}                </td>                <td [ngStyle]="{\'color\': ((conta.saldoCredito - conta.saldoDebito) > 0) ? \'blue\' : ((conta.saldoCredito - conta.saldoDebito) == 0)? \'black\': \'red\', \'text-align\': \'center\'}">                    {{ (conta.saldoCredito - conta.saldoDebito) | number:\'1.2-2\' }}                </td>                -->                <td [ngStyle]="{\'text-align\': \'right\' }">                    <button pButton pRipple icon="pi pi-eye" class="p-button-rounded blue-button p-mr-2" (click)="consultarConta(conta)"></button>&nbsp;                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded orange-button p-mr-2" (click)="editarConta(conta)"></button>&nbsp;                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded red-button" (click)="excluirConta(conta)"></button>                </td>            </tr>        </ng-template>        <ng-template pTemplate="summary">        </ng-template>    </p-table>    </ng-container></div></div>'
+    var COMPONENTS = [{'name': 'AutenticacaoComponent', 'selector': 'app-autenticacao'},{'name': 'ContaDetalheComponent', 'selector': 'app-conta-detalhe'},{'name': 'ContasComponent', 'selector': 'app-contas'},{'name': 'CreditosComponent', 'selector': 'app-creditos'},{'name': 'EntrarComponent', 'selector': 'app-entrar'},{'name': 'LancamentoDetalheComponent', 'selector': 'app-lancamento-detalhe'},{'name': 'LancamentosComponent', 'selector': 'app-lancamentos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainComponent', 'selector': 'app-root'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'RecuperarComponent', 'selector': 'app-recuperar'},{'name': 'RegistoComponent', 'selector': 'app-registo'},{'name': 'SaldosComponent', 'selector': 'app-saldos'},{'name': 'SplashScreenComponent', 'selector': 'app-splash-screen'}];
+    var DIRECTIVES = [{'name': 'CustomMaxDirective', 'selector': '[customMax][formControlName],[customMax][formControl],[customMax][ngModel]'},{'name': 'CustomMinDirective', 'selector': '[customMin][formControlName],[customMin][formControl],[customMin][ngModel]'}];
+    var ACTUAL_COMPONENT = {'name': 'ContasComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ContasComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
